@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import SimpleBar from 'simplebar-react';
 //import logo
 import logoSm from '../assets/images/logo-sm.png';
@@ -45,7 +45,7 @@ const Sidebar = ({ layoutType }) => {
 		<React.Fragment>
 			<div className='app-menu navbar-menu'>
 				<div className='navbar-brand-box'>
-					<Link to='/' className='logo logo-dark'>
+					<Link href='/' className='logo logo-dark'>
 						<span className='logo-sm'>
 							<img src={logoSm} alt='' height='22' />
 						</span>
@@ -54,7 +54,7 @@ const Sidebar = ({ layoutType }) => {
 						</span>
 					</Link>
 
-					<Link to='/' className='logo logo-light'>
+					<Link href='/' className='logo logo-light'>
 						<span className='logo-sm'>
 							<img src={logoSm} alt='' height='22' />
 						</span>

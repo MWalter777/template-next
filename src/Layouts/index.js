@@ -53,47 +53,6 @@ const Layout = (props) => {
 	}));
 
 	/*
-    layout settings
-    */
-	useEffect(() => {
-		if (
-			layoutType ||
-			leftSidebarType ||
-			layoutModeType ||
-			layoutWidthType ||
-			layoutPositionType ||
-			topbarThemeType ||
-			leftsidbarSizeType ||
-			leftSidebarViewType ||
-			leftSidebarImageType ||
-			sidebarVisibilitytype
-		) {
-			window.dispatchEvent(new Event('resize'));
-			dispatch(changeLeftsidebarViewType(leftSidebarViewType));
-			dispatch(changeLeftsidebarSizeType(leftsidbarSizeType));
-			dispatch(changeSidebarTheme(leftSidebarType));
-			dispatch(changeLayoutMode(layoutModeType));
-			dispatch(changeLayoutWidth(layoutWidthType));
-			dispatch(changeLayoutPosition(layoutPositionType));
-			dispatch(changeTopbarTheme(topbarThemeType));
-			dispatch(changeLayout(layoutType));
-			dispatch(changeSidebarImageType(leftSidebarImageType));
-			dispatch(changeSidebarVisibility(sidebarVisibilitytype));
-		}
-	}, [
-		layoutType,
-		leftSidebarType,
-		layoutModeType,
-		layoutWidthType,
-		layoutPositionType,
-		topbarThemeType,
-		leftsidbarSizeType,
-		leftSidebarViewType,
-		leftSidebarImageType,
-		sidebarVisibilitytype,
-		dispatch,
-	]);
-	/*
     call dark/light mode
     */
 	const onChangeLayoutMode = (value) => {
@@ -101,11 +60,6 @@ const Layout = (props) => {
 			dispatch(changeLayoutMode(value));
 		}
 	};
-
-	// class add remove in header
-	useEffect(() => {
-		window.addEventListener('scroll', scrollNavigation, true);
-	});
 
 	function scrollNavigation() {
 		var scrollup = document.documentElement.scrollTop;

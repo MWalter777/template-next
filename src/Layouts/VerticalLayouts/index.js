@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Collapse } from 'reactstrap';
 // Import Data
 import navdata from '../LayoutMenuData';
@@ -73,30 +73,6 @@ layout settings
 			}
 		}
 	}, [leftsidbarSizeType, sidebarVisibilitytype, layoutType]);
-
-	useEffect(() => {
-		window.addEventListener('resize', resizeSidebarMenu, true);
-	}, [resizeSidebarMenu]);
-
-	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-		const initMenu = () => {
-			const pathName = process.env.PUBLIC_URL + path;
-			const ul = document.getElementById('navbar-nav');
-			const items = ul.getElementsByTagName('a');
-			let itemsArray = [...items]; // converts NodeList to Array
-			removeActivation(itemsArray);
-			let matchingMenuItem = itemsArray.find((x) => {
-				return x.pathname === pathName;
-			});
-			if (matchingMenuItem) {
-				activateParentDropdown(matchingMenuItem);
-			}
-		};
-		if (props.layoutType === 'vertical') {
-			initMenu();
-		}
-	}, [path, props.layoutType]);
 
 	function activateParentDropdown(item) {
 		item.classList.add('active');
@@ -179,7 +155,7 @@ layout settings
 								<Link
 									onClick={item.click}
 									className='nav-link menu-link'
-									to={item.link ? item.link : '/#'}
+									href={item.link ? item.link : '/#'}
 									data-bs-toggle='collapse'
 								>
 									<i className={item.icon}></i>
@@ -206,7 +182,7 @@ layout settings
 													{!subItem.isChildItem ? (
 														<li className='nav-item'>
 															<Link
-																to={subItem.link ? subItem.link : '/#'}
+																href={subItem.link ? subItem.link : '/#'}
 																className='nav-link'
 															>
 																{props.t(subItem.label)}
@@ -228,7 +204,7 @@ layout settings
 															<Link
 																onClick={subItem.click}
 																className='nav-link'
-																to='/#'
+																href='/#'
 																data-bs-toggle='collapse'
 															>
 																{props.t(subItem.label)}
@@ -258,7 +234,7 @@ layout settings
 																					{!childItem.childItems ? (
 																						<li className='nav-item'>
 																							<Link
-																								to={
+																								href={
 																									childItem.link
 																										? childItem.link
 																										: '/#'
@@ -271,7 +247,7 @@ layout settings
 																					) : (
 																						<li className='nav-item'>
 																							<Link
-																								to='/#'
+																								href='/#'
 																								className='nav-link'
 																								onClick={childItem.click}
 																								data-bs-toggle='collapse'
@@ -293,7 +269,9 @@ layout settings
 																												key={key}
 																											>
 																												<Link
-																													to={subChildItem.link}
+																													href={
+																														subChildItem.link
+																													}
 																													className='nav-link'
 																													data-key='t-basic-action'
 																												>
@@ -324,7 +302,7 @@ layout settings
 							<li className='nav-item'>
 								<Link
 									className='nav-link menu-link'
-									to={item.link ? item.link : '/#'}
+									href={item.link ? item.link : '/#'}
 								>
 									<i className={item.icon}></i>{' '}
 									<span>{props.t(item.label)}</span>

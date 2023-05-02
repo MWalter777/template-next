@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import { Dropdown, DropdownMenu, DropdownToggle, Form } from 'reactstrap';
 
 //import images
@@ -17,64 +18,13 @@ import NotificationDropdown from '../Components/Common/NotificationDropdown';
 import ProfileDropdown from '../Components/Common/ProfileDropdown';
 import LightDark from '../Components/Common/LightDark';
 
-import { changeSidebarVisibility } from '../slices/thunks';
-import { useSelector, useDispatch } from 'react-redux';
-
-const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
-	const dispatch = useDispatch();
-
-	const { sidebarVisibilitytype } = useSelector((state) => ({
-		sidebarVisibilitytype: state.Layout.sidebarVisibilitytype,
-	}));
-
+const Header = ({ layoutModeType, headerClass }) => {
 	const [search, setSearch] = useState(false);
 	const toogleSearch = () => {
 		setSearch(!search);
 	};
 
-	const toogleMenuBtn = () => {
-		var windowSize = document.documentElement.clientWidth;
-		dispatch(changeSidebarVisibility('show'));
-
-		if (windowSize > 767)
-			document.querySelector('.hamburger-icon').classList.toggle('open');
-
-		//For collapse horizontal menu
-		if (document.documentElement.getAttribute('data-layout') === 'horizontal') {
-			document.body.classList.contains('menu')
-				? document.body.classList.remove('menu')
-				: document.body.classList.add('menu');
-		}
-
-		//For collapse vertical menu
-		if (
-			sidebarVisibilitytype === 'show' &&
-			(document.documentElement.getAttribute('data-layout') === 'vertical' ||
-				document.documentElement.getAttribute('data-layout') === 'semibox')
-		) {
-			if (windowSize < 1025 && windowSize > 767) {
-				document.body.classList.remove('vertical-sidebar-enable');
-				document.documentElement.getAttribute('data-sidebar-size') === 'sm'
-					? document.documentElement.setAttribute('data-sidebar-size', '')
-					: document.documentElement.setAttribute('data-sidebar-size', 'sm');
-			} else if (windowSize > 1025) {
-				document.body.classList.remove('vertical-sidebar-enable');
-				document.documentElement.getAttribute('data-sidebar-size') === 'lg'
-					? document.documentElement.setAttribute('data-sidebar-size', 'sm')
-					: document.documentElement.setAttribute('data-sidebar-size', 'lg');
-			} else if (windowSize <= 767) {
-				document.body.classList.add('vertical-sidebar-enable');
-				document.documentElement.setAttribute('data-sidebar-size', 'lg');
-			}
-		}
-
-		//Two column menu
-		if (document.documentElement.getAttribute('data-layout') === 'twocolumn') {
-			document.body.classList.contains('twocolumn-panel')
-				? document.body.classList.remove('twocolumn-panel')
-				: document.body.classList.add('twocolumn-panel');
-		}
-	};
+	const toogleMenuBtn = () => {};
 	return (
 		<React.Fragment>
 			<header id='page-topbar' className={headerClass}>
@@ -82,7 +32,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
 					<div className='navbar-header'>
 						<div className='d-flex'>
 							<div className='navbar-brand-box horizontal-logo'>
-								<Link to='/' className='logo logo-dark'>
+								<Link href='/' className='logo logo-dark'>
 									<span className='logo-sm'>
 										<img src={logoSm} alt='' height='22' />
 									</span>
@@ -91,7 +41,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
 									</span>
 								</Link>
 
-								<Link to='/' className='logo logo-light'>
+								<Link href='/' className='logo logo-light'>
 									<span className='logo-sm'>
 										<img src={logoSm} alt='' height='22' />
 									</span>

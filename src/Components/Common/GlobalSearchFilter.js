@@ -8,7 +8,7 @@ import {
 	DropdownItem,
 	DropdownMenu,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Flatpickr from 'react-flatpickr';
 import Select from 'react-select';
 
@@ -17,7 +17,10 @@ const ProductsGlobalFilter = () => {
 		<React.Fragment>
 			<div className='col-sm-auto ms-auto'>
 				<div>
-					<Link to='/apps-ecommerce-add-product' className='btn btn-secondary'>
+					<Link
+						href='/apps-ecommerce-add-product'
+						className='btn btn-secondary'
+					>
 						<i className='ri-add-line align-bottom me-1'></i> Add Product
 					</Link>
 				</div>

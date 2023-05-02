@@ -5,25 +5,6 @@ import {
 	OffcanvasBody,
 	Collapse,
 } from 'reactstrap';
-import withRouter from './withRouter';
-
-//redux
-import {
-	changeLayout,
-	changeSidebarTheme,
-	changeLayoutMode,
-	changeLayoutWidth,
-	changeLayoutPosition,
-	changeTopbarTheme,
-	changeLeftsidebarSizeType,
-	changeLeftsidebarViewType,
-	changeSidebarImageType,
-	changePreLoader,
-	changeSidebarVisibility,
-	// resetValue
-} from '../../slices/thunks';
-
-import { useSelector, useDispatch } from 'react-redux';
 
 //import Constant
 import {
@@ -57,54 +38,12 @@ const RightSidebar = (props) => {
 
 	function tog_show() {
 		setShow(!show);
-		dispatch(changeSidebarTheme('gradient'));
 	}
-
-	useEffect(() => {
-		if (
-			show &&
-			document.getElementById('sidebar-color-dark') &&
-			document.getElementById('sidebar-color-light')
-		) {
-			document.getElementById('sidebar-color-dark').checked = false;
-			document.getElementById('sidebar-color-light').checked = false;
-		}
-	});
-
-	const {
-		layoutType,
-		leftSidebarType,
-		layoutModeType,
-		layoutWidthType,
-		layoutPositionType,
-		topbarThemeType,
-		leftsidbarSizeType,
-		leftSidebarViewType,
-		leftSidebarImageType,
-		preloader,
-		sidebarVisibilitytype,
-	} = useSelector((state) => ({
-		layoutType: state.Layout.layoutType,
-		leftSidebarType: state.Layout.leftSidebarType,
-		layoutModeType: state.Layout.layoutModeType,
-		layoutWidthType: state.Layout.layoutWidthType,
-		layoutPositionType: state.Layout.layoutPositionType,
-		topbarThemeType: state.Layout.topbarThemeType,
-		leftsidbarSizeType: state.Layout.leftsidbarSizeType,
-		leftSidebarViewType: state.Layout.leftSidebarViewType,
-		leftSidebarImageType: state.Layout.leftSidebarImageType,
-		preloader: state.Layout.preloader,
-		sidebarVisibilitytype: state.Layout.sidebarVisibilitytype,
-	}));
 
 	// open offcanvas
 	const [open, setOpen] = useState(true);
 	const toggleLeftCanvas = () => {
 		setOpen(!open);
-	};
-
-	window.onscroll = function () {
-		scrollFunction();
 	};
 
 	const scrollFunction = () => {
@@ -1584,4 +1523,4 @@ const RightSidebar = (props) => {
 	);
 };
 
-export default withRouter(RightSidebar);
+export default RightSidebar;

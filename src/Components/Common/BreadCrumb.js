@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Col, Row } from 'reactstrap';
 
 const BreadCrumb = ({ title, pageTitle }) => {
@@ -13,7 +13,7 @@ const BreadCrumb = ({ title, pageTitle }) => {
 						<div className='page-title-right'>
 							<ol className='breadcrumb m-0'>
 								<li className='breadcrumb-item'>
-									<Link to='#'>{pageTitle}</Link>
+									<Link href='#'>{pageTitle}</Link>
 								</li>
 								<li className='breadcrumb-item active'>{title}</li>
 							</ol>

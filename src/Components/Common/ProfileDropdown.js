@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
 	Dropdown,
 	DropdownItem,
@@ -68,7 +69,7 @@ const ProfileDropdown = () => {
 					<h6 className='dropdown-header'>Welcome {userName}!</h6>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/profile'}
+							href={process.env.PUBLIC_URL + '/profile'}
 							className='dropdown-item'
 						>
 							<i className='mdi mdi-account-circle text-muted fs-16 align-middle me-1'></i>
@@ -77,7 +78,7 @@ const ProfileDropdown = () => {
 					</DropdownItem>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/apps-chat'}
+							href={process.env.PUBLIC_URL + '/apps-chat'}
 							className='dropdown-item'
 						>
 							<i className='mdi mdi-message-text-outline text-muted fs-16 align-middle me-1'></i>{' '}
@@ -85,14 +86,14 @@ const ProfileDropdown = () => {
 						</Link>
 					</DropdownItem>
 					<DropdownItem className='p-0'>
-						<Link to={'#'} className='dropdown-item'>
+						<Link href={'#'} className='dropdown-item'>
 							<i className='mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1'></i>{' '}
 							<span className='align-middle'>Taskboard</span>
 						</Link>
 					</DropdownItem>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/pages-faqs'}
+							href={process.env.PUBLIC_URL + '/pages-faqs'}
 							className='dropdown-item'
 						>
 							<i className='mdi mdi-lifebuoy text-muted fs-16 align-middle me-1'></i>{' '}
@@ -102,7 +103,7 @@ const ProfileDropdown = () => {
 					<div className='dropdown-divider'></div>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/pages-profile'}
+							href={process.env.PUBLIC_URL + '/pages-profile'}
 							className='dropdown-item'
 						>
 							<i className='mdi mdi-wallet text-muted fs-16 align-middle me-1'></i>{' '}
@@ -113,7 +114,7 @@ const ProfileDropdown = () => {
 					</DropdownItem>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/pages-profile-settings'}
+							href={process.env.PUBLIC_URL + '/pages-profile-settings'}
 							className='dropdown-item'
 						>
 							<span className='badge bg-soft-success text-success mt-1 float-end'>
@@ -125,7 +126,7 @@ const ProfileDropdown = () => {
 					</DropdownItem>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/auth-lockscreen-basic'}
+							href={process.env.PUBLIC_URL + '/auth-lockscreen-basic'}
 							className='dropdown-item'
 						>
 							<i className='mdi mdi-lock text-muted fs-16 align-middle me-1'></i>{' '}
@@ -134,7 +135,7 @@ const ProfileDropdown = () => {
 					</DropdownItem>
 					<DropdownItem className='p-0'>
 						<Link
-							to={process.env.PUBLIC_URL + '/logout'}
+							href={process.env.PUBLIC_URL + '/logout'}
 							className='dropdown-item'
 						>
 							<i className='mdi mdi-logout text-muted fs-16 align-middle me-1'></i>{' '}
