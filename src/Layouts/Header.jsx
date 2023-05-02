@@ -8,7 +8,6 @@ import logoDark from '../assets/images/logo-dark.png';
 import logoLight from '../assets/images/logo-light.png';
 
 import SearchOption from '../Components/Common/SearchOption';
-import LanguageDropdown from '../Components/Common/LanguageDropdown';
 import WebAppsDropdown from '../Components/Common/WebAppsDropdown';
 import MyCartDropdown from '../Components/Common/MyCartDropdown';
 import FullScreenDropdown from '../Components/Common/FullScreenDropdown';
@@ -16,7 +15,7 @@ import NotificationDropdown from '../Components/Common/NotificationDropdown';
 import ProfileDropdown from '../Components/Common/ProfileDropdown';
 import LightDark from '../Components/Common/LightDark';
 
-const Header = ({ layoutModeType, headerClass }) => {
+const Header = ({ headerClass }) => {
 	const [search, setSearch] = useState(false);
 	const toogleSearch = () => {
 		setSearch(!search);
@@ -31,7 +30,7 @@ const Header = ({ layoutModeType, headerClass }) => {
 						<div className='navbar-brand-box horizontal-logo'>
 							<Link href='/' className='logo logo-dark'>
 								<span className='logo-sm'>
-									<img src={logoSm} alt='' height='22' />
+									<img src={logoSm} alt='here should be the logo' height='22' />
 								</span>
 								<span className='logo-lg'>
 									<img src={logoDark} alt='' height='17' />
@@ -96,18 +95,13 @@ const Header = ({ layoutModeType, headerClass }) => {
 							</DropdownMenu>
 						</Dropdown>
 
-						{/* LanguageDropdown */}
-						<LanguageDropdown />
-
-						{/* WebAppsDropdown */}
 						<WebAppsDropdown />
 
-						{/* MyCartDropdwon */}
 						<MyCartDropdown />
 
 						<FullScreenDropdown />
 
-						<LightDark layoutMode={layoutModeType} />
+						<LightDark />
 
 						<NotificationDropdown />
 

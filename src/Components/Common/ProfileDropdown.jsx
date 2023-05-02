@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 
 import avatar1 from '../../assets/images/users/avatar-1.jpg';
+import Image from 'next/image';
 
 const ProfileDropdown = () => {
 	const [userName, setUserName] = useState('Admin');
@@ -27,7 +28,7 @@ const ProfileDropdown = () => {
 			>
 				<DropdownToggle tag='button' type='button' className='btn'>
 					<span className='d-flex align-items-center'>
-						<img
+						<Image
 							className='rounded-circle header-profile-user'
 							src={avatar1}
 							alt='Header Avatar'

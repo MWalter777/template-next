@@ -11,6 +11,7 @@ import image2 from '../../assets/images/products/img-2.png';
 import image3 from '../../assets/images/products/img-3.png';
 import image6 from '../../assets/images/products/img-6.png';
 import image5 from '../../assets/images/products/img-5.png';
+import Image from 'next/image';
 
 const MyCartDropdown = () => {
 	const cartData = [
@@ -135,7 +136,7 @@ const MyCartDropdown = () => {
 									key={key}
 								>
 									<div className='d-flex align-items-center'>
-										<img
+										<Image
 											src={item.img}
 											className='me-3 rounded-circle avatar-sm p-2 bg-light'
 											alt='user-pic'

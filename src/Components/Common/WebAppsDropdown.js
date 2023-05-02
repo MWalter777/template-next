@@ -9,6 +9,7 @@ import dropbox from '../../assets/images/brands/dropbox.png';
 import mail_chimp from '../../assets/images/brands/mail_chimp.png';
 import slack from '../../assets/images/brands/slack.png';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const WebAppsDropdown = () => {
 	const [isWebAppDropdown, setIsWebAppDropdown] = useState(false);
@@ -49,19 +50,19 @@ const WebAppsDropdown = () => {
 						<div className='row g-0'>
 							<Col>
 								<Link className='dropdown-icon-item' href='#'>
-									<img src={github} alt='Github' />
+									<Image src={github} alt='Github' />
 									<span>GitHub</span>
 								</Link>
 							</Col>
 							<Col>
 								<Link className='dropdown-icon-item' href='#'>
-									<img src={bitbucket} alt='bitbucket' />
+									<Image src={bitbucket} alt='bitbucket' />
 									<span>Bitbucket</span>
 								</Link>
 							</Col>
 							<Col>
 								<Link className='dropdown-icon-item' href='#'>
-									<img src={dribbble} alt='dribbble' />
+									<Image src={dribbble} alt='dribbble' />
 									<span>Dribbble</span>
 								</Link>
 							</Col>
@@ -70,19 +71,19 @@ const WebAppsDropdown = () => {
 						<div className='row g-0'>
 							<Col>
 								<Link className='dropdown-icon-item' href='#'>
-									<img src={dropbox} alt='dropbox' />
+									<Image src={dropbox} alt='dropbox' />
 									<span>Dropbox</span>
 								</Link>
 							</Col>
 							<Col>
 								<Link className='dropdown-icon-item' href='#'>
-									<img src={mail_chimp} alt='mail_chimp' />
+									<Image src={mail_chimp} alt='mail_chimp' />
 									<span>Mail Chimp</span>
 								</Link>
 							</Col>
 							<Col>
 								<Link className='dropdown-icon-item' href='#'>
-									<img src={slack} alt='slack' />
+									<Image src={slack} alt='slack' />
 									<span>Slack</span>
 								</Link>
 							</Col>

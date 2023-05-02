@@ -14,7 +14,7 @@ const Layout = ({ children, title = 'Dashboard', content = '' }) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div id='layout-wrapper'>
-				<Header headerClass={'topbar-shadow'} layoutModeType='dark' />
+				<Header headerClass={'topbar-shadow'} />
 				<Sidebar />
 				<div className='main-content'>
 					<div className='page-content'>{children}</div>

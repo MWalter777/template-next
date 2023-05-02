@@ -23,6 +23,7 @@ import bell from '../../assets/images/svg/bell.svg';
 
 //SimpleBar
 import SimpleBar from 'simplebar-react';
+import Image from 'next/image';
 
 const NotificationDropdown = () => {
 	//Dropdown Toggle
@@ -155,7 +156,7 @@ const NotificationDropdown = () => {
 
 								<div className='text-reset notification-item d-block dropdown-item position-relative active'>
 									<div className='d-flex'>
-										<img
+										<Image
 											src={avatar2}
 											className='me-3 rounded-circle avatar-xs'
 											alt='user-pic'
@@ -236,7 +237,7 @@ const NotificationDropdown = () => {
 
 								<div className='text-reset notification-item d-block dropdown-item position-relative'>
 									<div className='d-flex'>
-										<img
+										<Image
 											src={avatar8}
 											className='me-3 rounded-circle avatar-xs'
 											alt='user-pic'
@@ -292,7 +293,7 @@ const NotificationDropdown = () => {
 							<SimpleBar style={{ maxHeight: '300px' }} className='pe-2'>
 								<div className='text-reset notification-item d-block dropdown-item'>
 									<div className='d-flex'>
-										<img
+										<Image
 											src={avatar3}
 											className='me-3 rounded-circle avatar-xs'
 											alt='user-pic'
@@ -334,7 +335,7 @@ const NotificationDropdown = () => {
 
 								<div className='text-reset notification-item d-block dropdown-item'>
 									<div className='d-flex'>
-										<img
+										<Image
 											src={avatar2}
 											className='me-3 rounded-circle avatar-xs'
 											alt='user-pic'
@@ -377,7 +378,7 @@ const NotificationDropdown = () => {
 
 								<div className='text-reset notification-item d-block dropdown-item'>
 									<div className='d-flex'>
-										<img
+										<Image
 											src={avatar6}
 											className='me-3 rounded-circle avatar-xs'
 											alt='user-pic'
@@ -419,7 +420,7 @@ const NotificationDropdown = () => {
 
 								<div className='text-reset notification-item d-block dropdown-item'>
 									<div className='d-flex'>
-										<img
+										<Image
 											src={avatar8}
 											className='me-3 rounded-circle avatar-xs'
 											alt='user-pic'
@@ -472,7 +473,7 @@ const NotificationDropdown = () => {
 						</TabPane>
 						<TabPane tabId='3' className='p-4'>
 							<div className='w-25 w-sm-50 pt-3 mx-auto'>
-								<img src={bell} className='img-fluid' alt='user-pic' />
+								<Image src={bell} className='img-fluid' alt='user-pic' />
 							</div>
 							<div className='text-center pb-5 mt-2'>
 								<h6 className='fs-18 fw-semibold lh-base'>
