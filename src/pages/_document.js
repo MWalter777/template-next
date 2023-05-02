@@ -6,7 +6,7 @@ export default function Document() {
 		<Html
 			lang='en'
 			data-layout-style='default'
-			data-layout-mode='dark'
+			data-layout-mode='light'
 			data-layout-position='fixed'
 			data-topbar='light'
 			data-layout='vertical'
