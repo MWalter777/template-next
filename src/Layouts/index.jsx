@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 			<Header headerClass={'topbar-shadow'} layoutModeType='dark' />
 			<Sidebar />
 			<div className='main-content'>
-				{children}
+				<div className='page-content'>{children}</div>
 				<Footer />
 			</div>
 		</div>
