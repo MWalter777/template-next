@@ -1,9 +1,8 @@
 import React from 'react';
 
-//constants
-import { layoutModeTypes } from '../../Components/constants/layout';
+import { layoutModeTypes } from '../constants/layout';
 
-const LightDark = ({ layoutMode, onChangeLayoutMode }) => {
+const LightDark = ({ layoutMode }) => {
 	const mode =
 		layoutMode === layoutModeTypes['DARKMODE']
 			? layoutModeTypes['LIGHTMODE']
@@ -12,7 +11,6 @@ const LightDark = ({ layoutMode, onChangeLayoutMode }) => {
 	return (
 		<div className='ms-1 header-item d-none d-sm-flex'>
 			<button
-				onClick={() => onChangeLayoutMode(mode)}
 				type='button'
 				className='btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode'
 			>

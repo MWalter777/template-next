@@ -5,10 +5,6 @@ import {
 	DropdownMenu,
 	DropdownToggle,
 } from 'reactstrap';
-import { get } from 'lodash';
-
-//i18n
-import i18n from '../../i18n';
 import languages from '../../common/languages';
 
 const LanguageDropdown = () => {
@@ -43,7 +39,7 @@ const LanguageDropdown = () => {
 					tag='button'
 				>
 					<img
-						src={get(languages, `${selectedLang}.flag`)}
+						src={`${selectedLang}.flag`}
 						alt='Header Language'
 						height='20'
 						className='rounded'
@@ -59,14 +55,12 @@ const LanguageDropdown = () => {
 							}`}
 						>
 							<img
-								src={get(languages, `${key}.flag`)}
+								src={`${key}.flag`}
 								alt='Skote'
 								className='me-2 rounded'
 								height='18'
 							/>
-							<span className='align-middle'>
-								{get(languages, `${key}.label`)}
-							</span>
+							<span className='align-middle'>{`${key}.label`}</span>
 						</DropdownItem>
 					))}
 				</DropdownMenu>
