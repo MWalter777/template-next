@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Sidebar from './Sidebar';
@@ -15,6 +15,7 @@ const Layout = ({ children, title = 'Dashboard', content = '' }) => {
 			</Head>
 			<div id='layout-wrapper'>
 				<Header headerClass={'topbar-shadow'} />
+
 				<Sidebar />
 				<div className='main-content'>
 					<div className='page-content'>{children}</div>

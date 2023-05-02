@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import SimpleBar from 'simplebar-react';
 import logoSm from '../assets/images/logo-sm.png';
 import logoDark from '../assets/images/logo-dark.png';
@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const Sidebar = () => {
 	return (
-		<React.Fragment>
+		<Fragment>
 			<div className='app-menu navbar-menu'>
 				<div className='navbar-brand-box'>
 					<Link href='/' className='logo logo-dark'>
@@ -38,7 +38,7 @@ const Sidebar = () => {
 					</button>
 				</div>
 
-				<React.Fragment>
+				<Fragment>
 					<SimpleBar id='scrollbar' className='h-100'>
 						<Container fluid>
 							<div id='two-column-menu'></div>
@@ -48,10 +48,10 @@ const Sidebar = () => {
 						</Container>
 					</SimpleBar>
 					<div className='sidebar-background'></div>
-				</React.Fragment>
+				</Fragment>
 			</div>
 			<div className='vertical-sidebar-enable'></div>
-		</React.Fragment>
+		</Fragment>
 	);
 };
 

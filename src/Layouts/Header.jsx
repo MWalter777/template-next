@@ -17,11 +17,11 @@ import LightDark from '../Components/Common/LightDark';
 
 const Header = ({ headerClass }) => {
 	const [search, setSearch] = useState(false);
+
 	const toogleSearch = () => {
 		setSearch(!search);
 	};
 
-	const toogleMenuBtn = () => {};
 	return (
 		<header id='page-topbar' className={headerClass}>
 			<div className='layout-width'>
@@ -48,7 +48,6 @@ const Header = ({ headerClass }) => {
 						</div>
 
 						<button
-							onClick={toogleMenuBtn}
 							type='button'
 							className='btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger'
 							id='topnav-hamburger-icon'
