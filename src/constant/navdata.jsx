@@ -94,7 +94,7 @@ export const menuItems = [
 				link: '/pages/timeline',
 				parentId: 'pages',
 			},
-			{ id: 'faqs', label: 'FAQs', link: '/pages-faqs', parentId: 'pages' },
+			{ id: 'faqs', label: 'FAQs', link: '/pages/faqs', parentId: 'pages' },
 			{
 				id: 'pricing',
 				label: 'Pricing',
