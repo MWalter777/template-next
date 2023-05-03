@@ -82,12 +82,12 @@ export const menuItems = [
 					{
 						id: 2,
 						label: 'Settings',
-						link: '/pages-profile-settings',
+						link: '/pages/profile/settings',
 						parentId: 'pages',
 					},
 				],
 			},
-			{ id: 'team', label: 'Team', link: '/pages-team', parentId: 'pages' },
+			{ id: 'team', label: 'Team', link: '/pages/team', parentId: 'pages' },
 			{
 				id: 'timeline',
 				label: 'Timeline',

@@ -187,7 +187,7 @@ const SimplePage = () => {
 								</Nav>
 								<div className='flex-shrink-0'>
 									<Link
-										href='/pages-profile-settings'
+										href='/pages/profile/settings'
 										className='btn btn-secondary'
 									>
 										<i className='ri-edit-box-line align-bottom'></i> Edit
