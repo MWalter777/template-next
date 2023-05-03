@@ -6,6 +6,7 @@ import logoLight from '../assets/images/logo-light.png';
 import VerticalLayout from './VerticalLayout';
 import { Container } from 'reactstrap';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Sidebar = () => {
 	return (
@@ -14,19 +15,19 @@ const Sidebar = () => {
 				<div className='navbar-brand-box'>
 					<Link href='/' className='logo logo-dark'>
 						<span className='logo-sm'>
-							<img src={logoSm} alt='' height='22' />
+							<Image src={logoSm} alt='' height='22' />
 						</span>
 						<span className='logo-lg'>
-							<img src={logoDark} alt='' height='17' />
+							<Image src={logoDark} alt='' height='17' />
 						</span>
 					</Link>
 
 					<Link href='/' className='logo logo-light'>
 						<span className='logo-sm'>
-							<img src={logoSm} alt='' height='22' />
+							<Image src={logoSm} alt='' height='22' />
 						</span>
 						<span className='logo-lg'>
-							<img src={logoLight} alt='' height='17' />
+							<Image src={logoLight} alt='' height='17' />
 						</span>
 					</Link>
 					<button

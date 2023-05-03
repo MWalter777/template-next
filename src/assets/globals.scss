@@ -3,3 +3,10 @@ here your global styles
 **/
 
 @import '~node_modules/bootstrap/scss/bootstrap';
+
+.subitems-nav-menu {
+	background: none;
+	width: 100%;
+	display: flex;
+	border: none;
+}
