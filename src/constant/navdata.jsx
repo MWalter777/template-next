@@ -98,7 +98,7 @@ export const menuItems = [
 			{
 				id: 'pricing',
 				label: 'Pricing',
-				link: '/pages-pricing',
+				link: '/pages/pricing',
 				parentId: 'pages',
 			},
 			{
