@@ -24,6 +24,7 @@ import {
 	GradientBadgesExample,
 } from '../../../Components/ui-common/UiBadgesCode.jsx';
 import Layout from '@/Layouts';
+import dynamic from 'next/dynamic';
 
 const UiBadges = () => {
 	return (
@@ -598,4 +599,4 @@ const UiBadges = () => {
 	);
 };
 
-export default UiBadges;
+export default dynamic(() => Promise.resolve(UiBadges), { ssr: false });

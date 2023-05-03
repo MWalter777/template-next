@@ -1,4 +1,5 @@
-import PrismCode from '../../../Components/Common/Prism';
+import React from 'react';
+import PrismCode from '../Common/Prism';
 
 // Default Buttons
 
