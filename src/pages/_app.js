@@ -3,6 +3,7 @@ import 'cleave.js/dist/addons/cleave-phone.in';
 import '@/assets/globals.scss';
 import '@/assets/scss/jquery-jvectormap.scss';
 import '@/assets/scss/themes.scss';
+import 'quill/dist/quill.snow.css';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
