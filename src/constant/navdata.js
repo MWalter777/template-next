@@ -58,13 +58,6 @@ export const menuItems = [
 		id: 'apps',
 		label: 'Apps',
 		icon: 'ri-apps-2-line',
-		link: '/#',
-		click: function (e) {
-			e.preventDefault();
-			setIsApps(!isApps);
-			setIscurrentState('Apps');
-			updateIconSidebar(e);
-		},
 		subItems: [
 			{
 				id: 'calendar',
@@ -84,10 +77,6 @@ export const menuItems = [
 				link: '/#',
 				parentId: 'apps',
 				isChildItem: true,
-				click: function (e) {
-					e.preventDefault();
-					setEmail(!isEmail);
-				},
 				childItems: [
 					{
 						id: 1,

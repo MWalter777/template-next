@@ -19,7 +19,7 @@ import {
 	leftSidebarImageTypes,
 	preloaderTypes,
 	sidebarVisibilitytypes,
-} from '../constants/layout';
+} from '../../constant/layout';
 
 //SimpleBar
 import SimpleBar from 'simplebar-react';
