@@ -102,21 +102,9 @@ export const menuItems = [
 				parentId: 'pages',
 			},
 			{
-				id: 'gallery',
-				label: 'Gallery',
-				link: '/pages-gallery',
-				parentId: 'pages',
-			},
-			{
-				id: 'maintenance',
-				label: 'Maintenance',
-				link: '/pages-maintenance',
-				parentId: 'pages',
-			},
-			{
 				id: 'comingSoon',
 				label: 'Coming Soon',
-				link: '/pages-coming-soon',
+				link: '/pages/coming-soon',
 				parentId: 'pages',
 			},
 			{
