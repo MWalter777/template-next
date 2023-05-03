@@ -23,7 +23,7 @@ import {
 	DefaultOffcanvasExample,
 	PlacementOffcanvasExample,
 	BackdropOffcanvasExample,
-} from './UiOffcanvasCode';
+} from '../../../Components/ui-common/UiOffcanvasCode';
 
 // Import Images
 import avatar1 from '../../../assets/images/users/avatar-1.jpg';
@@ -41,6 +41,9 @@ import img9 from '../../../assets/images/small/img-9.jpg';
 import img10 from '../../../assets/images/small/img-10.jpg';
 import img11 from '../../../assets/images/small/img-11.jpg';
 import img12 from '../../../assets/images/small/img-12.jpg';
+import Layout from '@/Layouts';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 const UiOffcanvas = () => {
 	const [open, setOpen] = useState(false);
@@ -78,144 +81,127 @@ const UiOffcanvas = () => {
 		setIsScrollBackDrop(!isScrollBackDrop);
 	};
 
-	document.title = 'Offcanvas | Velzon - React Admin & Dashboard Template';
-
 	return (
-		<React.Fragment>
+		<Layout title='Offcanvas | Velzon - React Admin & Dashboard Template'>
 			<UiContent />
-			<div className='page-content'>
-				<Container fluid>
-					<BreadCrumb title='Offcanvas' pageTitle='Base UI' />
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Default Offcanvas' />
+			<Container fluid>
+				<BreadCrumb title='Offcanvas' pageTitle='Base UI' />
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Default Offcanvas' />
 
-								<CardBody>
-									<p className='text-muted'>
-										Use the <code>offcanvas</code> class to set a default
-										offcanvas.
-									</p>
-									<div className='live-preview'>
-										<div className='hstack flex-wrap gap-2'>
-											<Link
-												href='#'
-												className='btn btn-secondary'
-												onClick={toggleDefultCanvas}
-											>
-												Link with href
-											</Link>
-											<Button color='secondary' onClick={toggleDefultCanvas}>
-												Button with target
-											</Button>
-										</div>
-									</div>
-
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
+							<CardBody>
+								<p className='text-muted'>
+									Use the <code>offcanvas</code> class to set a default
+									offcanvas.
+								</p>
+								<div className='live-preview'>
+									<div className='hstack flex-wrap gap-2'>
+										<Link
+											href='#'
+											className='btn btn-secondary'
+											onClick={toggleDefultCanvas}
 										>
-											<code>
-												<DefaultOffcanvasExample />
-											</code>
-										</pre>
+											Link with href
+										</Link>
+										<Button color='secondary' onClick={toggleDefultCanvas}>
+											Button with target
+										</Button>
 									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
+								</div>
 
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Placement Offcanvas' />
-								<CardBody>
-									<p className='text-muted'>
-										Use <code>direction="start"</code> ,{' '}
-										<code>direction="top"</code>,{' '}
-										<code>direction="bottom"</code>, or{' '}
-										<code>direction="end"</code>, to offcanvas attribute to set
-										different Offcanvas Placement.
-									</p>
-									<div className='live-preview'>
-										<div className='d-flex flex-wrap gap-2'>
-											<Button color='primary' onClick={toggleTopCanvas}>
-												Toggle Top Offcanvas
-											</Button>
-											<Button color='secondary' onClick={toggleRightCanvas}>
-												Toggle Right Offcanvas
-											</Button>
-											<Button color='success' onClick={toggleBottomCanvas}>
-												Toggle Bottom Offcanvas
-											</Button>
-											<Button color='danger' onClick={toggleLeftCanvas}>
-												Toggle Left Offcanvas
-											</Button>
-										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<PlacementOffcanvasExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<DefaultOffcanvasExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
 
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Backdrop Offcanvas' />
-								<CardBody>
-									<p className='text-muted'>
-										Here are the example of offcanvas with scrolling active and
-										backdrop visible.
-									</p>
-									<div className='live-preview'>
-										<div className='d-flex flex-wrap gap-2'>
-											<Button
-												className='btn btn-light'
-												onClick={toggleEnableScroll}
-											>
-												Enable Body Scrolling
-											</Button>
-											<Button
-												className='btn btn-light'
-												onClick={toggleBackdrop}
-											>
-												Enable Backdrop (Default)
-											</Button>
-											<Button
-												className='btn btn-light'
-												onClick={toggleScrollBackDrop}
-											>
-												Enable Both Scrolling & Backdrop
-											</Button>
-										</div>
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Placement Offcanvas' />
+							<CardBody>
+								<p className='text-muted'>
+									Use <code>direction="start"</code> ,{' '}
+									<code>direction="top"</code>, <code>direction="bottom"</code>,
+									or <code>direction="end"</code>, to offcanvas attribute to set
+									different Offcanvas Placement.
+								</p>
+								<div className='live-preview'>
+									<div className='d-flex flex-wrap gap-2'>
+										<Button color='primary' onClick={toggleTopCanvas}>
+											Toggle Top Offcanvas
+										</Button>
+										<Button color='secondary' onClick={toggleRightCanvas}>
+											Toggle Right Offcanvas
+										</Button>
+										<Button color='success' onClick={toggleBottomCanvas}>
+											Toggle Bottom Offcanvas
+										</Button>
+										<Button color='danger' onClick={toggleLeftCanvas}>
+											Toggle Left Offcanvas
+										</Button>
 									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<PlacementOffcanvasExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Backdrop Offcanvas' />
+							<CardBody>
+								<p className='text-muted'>
+									Here are the example of offcanvas with scrolling active and
+									backdrop visible.
+								</p>
+								<div className='live-preview'>
+									<div className='d-flex flex-wrap gap-2'>
+										<Button
+											className='btn btn-light'
+											onClick={toggleEnableScroll}
 										>
-											<code>
-												<BackdropOffcanvasExample />
-											</code>
-										</pre>
+											Enable Body Scrolling
+										</Button>
+										<Button className='btn btn-light' onClick={toggleBackdrop}>
+											Enable Backdrop (Default)
+										</Button>
+										<Button
+											className='btn btn-light'
+											onClick={toggleScrollBackDrop}
+										>
+											Enable Both Scrolling & Backdrop
+										</Button>
 									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
-				</Container>
-			</div>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<BackdropOffcanvasExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+			</Container>
 
 			{/* Defult Offcanvas */}
 			<Offcanvas
@@ -235,7 +221,7 @@ const UiOffcanvas = () => {
 						<div className='acitivity-timeline p-4'>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar1}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -273,7 +259,7 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='avatar-group mb-2'>
 										<Link href='#' className='avatar-group-item' id='Christi'>
-											<img
+											<Image
 												src={avatar4}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -297,7 +283,7 @@ const UiOffcanvas = () => {
 										</UncontrolledTooltip>
 
 										<Link href='#' className='avatar-group-item' id='Frank'>
-											<img
+											<Image
 												src={avatar3}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -335,7 +321,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar2}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -353,13 +339,13 @@ const UiOffcanvas = () => {
 									</p>
 									<Row className='border border-dashed gx-2 p-2 mb-2'>
 										<Col className='col-4'>
-											<img src={img2} alt='' className='img-fluid rounded' />
+											<Image src={img2} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img3} alt='' className='img-fluid rounded' />
+											<Image src={img3} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img4} alt='' className='img-fluid rounded' />
+											<Image src={img4} alt='' className='img-fluid rounded' />
 										</Col>
 									</Row>
 									<small className='mb-0 text-muted'>25 Nov</small>
@@ -367,7 +353,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar6}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -405,7 +391,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar7}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -446,7 +432,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar8}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -498,7 +484,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box light mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img12}
 											alt=''
@@ -545,7 +531,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box light mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img9}
 											alt=''
@@ -591,7 +577,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img11}
 											alt=''
@@ -638,7 +624,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img10}
 											alt=''
@@ -700,7 +686,7 @@ const UiOffcanvas = () => {
 						<div className='acitivity-timeline p-4'>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar1}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -738,7 +724,7 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='avatar-group mb-2'>
 										<Link href='#' className='avatar-group-item' id='Christi'>
-											<img
+											<Image
 												src={avatar4}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -761,7 +747,7 @@ const UiOffcanvas = () => {
 											more{' '}
 										</UncontrolledTooltip>
 										<Link href='#' className='avatar-group-item' id='Frank'>
-											<img
+											<Image
 												src={avatar3}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -799,7 +785,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar2}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -817,13 +803,13 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='row border border-dashed gx-2 p-2 mb-2'>
 										<Col className='col-4'>
-											<img src={img2} alt='' className='img-fluid rounded' />
+											<Image src={img2} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img3} alt='' className='img-fluid rounded' />
+											<Image src={img3} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img4} alt='' className='img-fluid rounded' />
+											<Image src={img4} alt='' className='img-fluid rounded' />
 										</Col>
 									</div>
 									<small className='mb-0 text-muted'>25 Nov</small>
@@ -831,7 +817,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar6}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -869,7 +855,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar7}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -910,7 +896,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar8}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -962,7 +948,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box light mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img12}
 											alt=''
@@ -1009,7 +995,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box light mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img9}
 											alt=''
@@ -1055,7 +1041,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img11}
 											alt=''
@@ -1102,7 +1088,7 @@ const UiOffcanvas = () => {
 							<Card className='gallery-box mb-0'>
 								<div className='gallery-container'>
 									<Link href='#' title=''>
-										<img
+										<Image
 											className='gallery-img img-fluid mx-auto'
 											src={img10}
 											alt=''
@@ -1167,7 +1153,7 @@ const UiOffcanvas = () => {
 						<div className='acitivity-timeline p-4'>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar1}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -1205,7 +1191,7 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='avatar-group mb-2'>
 										<Link href='#' className='avatar-group-item' id='Christi'>
-											<img
+											<Image
 												src={avatar4}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -1217,7 +1203,7 @@ const UiOffcanvas = () => {
 										</UncontrolledTooltip>
 
 										<Link href='#' className='avatar-group-item' id='Frank'>
-											<img
+											<Image
 												src={avatar3}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -1255,7 +1241,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar2}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -1273,13 +1259,13 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='row border border-dashed gx-2 p-2 mb-2'>
 										<Col className='col-4'>
-											<img src={img2} alt='' className='img-fluid rounded' />
+											<Image src={img2} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img3} alt='' className='img-fluid rounded' />
+											<Image src={img3} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img4} alt='' className='img-fluid rounded' />
+											<Image src={img4} alt='' className='img-fluid rounded' />
 										</Col>
 									</div>
 									<small className='mb-0 text-muted'>25 Nov</small>
@@ -1287,7 +1273,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar6}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -1325,7 +1311,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar7}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -1366,7 +1352,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar8}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -1418,7 +1404,7 @@ const UiOffcanvas = () => {
 							<div className='acitivity-timeline p-4'>
 								<div className='acitivity-item d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar1}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1456,7 +1442,7 @@ const UiOffcanvas = () => {
 										</p>
 										<div className='avatar-group mb-2'>
 											<Link href='#' className='avatar-group-item' id='Christi'>
-												<img
+												<Image
 													src={avatar4}
 													alt=''
 													className='rounded-circle avatar-xs'
@@ -1467,7 +1453,7 @@ const UiOffcanvas = () => {
 												Christi{' '}
 											</UncontrolledTooltip>
 											<Link href='#' className='avatar-group-item' id='Frank'>
-												<img
+												<Image
 													src={avatar3}
 													alt=''
 													className='rounded-circle avatar-xs'
@@ -1505,7 +1491,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item py-3 d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar2}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1523,13 +1509,25 @@ const UiOffcanvas = () => {
 										</p>
 										<div className='row border border-dashed gx-2 p-2 mb-2'>
 											<Col className='col-4'>
-												<img src={img2} alt='' className='img-fluid rounded' />
+												<Image
+													src={img2}
+													alt=''
+													className='img-fluid rounded'
+												/>
 											</Col>
 											<Col className='col-4'>
-												<img src={img3} alt='' className='img-fluid rounded' />
+												<Image
+													src={img3}
+													alt=''
+													className='img-fluid rounded'
+												/>
 											</Col>
 											<Col className='col-4'>
-												<img src={img4} alt='' className='img-fluid rounded' />
+												<Image
+													src={img4}
+													alt=''
+													className='img-fluid rounded'
+												/>
 											</Col>
 										</div>
 										<small className='mb-0 text-muted'>25 Nov</small>
@@ -1537,7 +1535,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item py-3 d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar6}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1575,7 +1573,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item py-3 d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar7}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1616,7 +1614,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar8}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1668,7 +1666,7 @@ const UiOffcanvas = () => {
 							<div className='acitivity-timeline p-4'>
 								<div className='acitivity-item d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar1}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1711,7 +1709,7 @@ const UiOffcanvas = () => {
 												title=''
 												id='Christi'
 											>
-												<img
+												<Image
 													src={avatar4}
 													alt=''
 													className='rounded-circle avatar-xs'
@@ -1728,7 +1726,7 @@ const UiOffcanvas = () => {
 												title=''
 												id='Frank'
 											>
-												<img
+												<Image
 													src={avatar3}
 													alt=''
 													className='rounded-circle avatar-xs'
@@ -1776,7 +1774,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item py-3 d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar2}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1794,13 +1792,25 @@ const UiOffcanvas = () => {
 										</p>
 										<div className='row border border-dashed gx-2 p-2 mb-2'>
 											<Col className='col-4'>
-												<img src={img2} alt='' className='img-fluid rounded' />
+												<Image
+													src={img2}
+													alt=''
+													className='img-fluid rounded'
+												/>
 											</Col>
 											<Col className='col-4'>
-												<img src={img3} alt='' className='img-fluid rounded' />
+												<Image
+													src={img3}
+													alt=''
+													className='img-fluid rounded'
+												/>
 											</Col>
 											<Col className='col-4'>
-												<img src={img4} alt='' className='img-fluid rounded' />
+												<Image
+													src={img4}
+													alt=''
+													className='img-fluid rounded'
+												/>
 											</Col>
 										</div>
 										<small className='mb-0 text-muted'>25 Nov</small>
@@ -1808,7 +1818,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item py-3 d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar6}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1846,7 +1856,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item py-3 d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar7}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1887,7 +1897,7 @@ const UiOffcanvas = () => {
 								</div>
 								<div className='acitivity-item d-flex'>
 									<div className='flex-shrink-0'>
-										<img
+										<Image
 											src={avatar8}
 											alt=''
 											className='avatar-xs rounded-circle acitivity-avatar'
@@ -1938,7 +1948,7 @@ const UiOffcanvas = () => {
 						<div className='acitivity-timeline p-4'>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar1}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -1976,7 +1986,7 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='avatar-group mb-2'>
 										<Link href='#' className='avatar-group-item' id='Christi'>
-											<img
+											<Image
 												src={avatar4}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -1987,7 +1997,7 @@ const UiOffcanvas = () => {
 											Christi{' '}
 										</UncontrolledTooltip>
 										<Link href='#' className='avatar-group-item' id='Frank'>
-											<img
+											<Image
 												src={avatar3}
 												alt=''
 												className='rounded-circle avatar-xs'
@@ -2025,7 +2035,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar2}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -2043,13 +2053,13 @@ const UiOffcanvas = () => {
 									</p>
 									<div className='row border border-dashed gx-2 p-2 mb-2'>
 										<Col className='col-4'>
-											<img src={img2} alt='' className='img-fluid rounded' />
+											<Image src={img2} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img3} alt='' className='img-fluid rounded' />
+											<Image src={img3} alt='' className='img-fluid rounded' />
 										</Col>
 										<Col className='col-4'>
-											<img src={img4} alt='' className='img-fluid rounded' />
+											<Image src={img4} alt='' className='img-fluid rounded' />
 										</Col>
 									</div>
 									<small className='mb-0 text-muted'>25 Nov</small>
@@ -2057,7 +2067,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar6}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -2095,7 +2105,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item py-3 d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar7}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -2136,7 +2146,7 @@ const UiOffcanvas = () => {
 							</div>
 							<div className='acitivity-item d-flex'>
 								<div className='flex-shrink-0'>
-									<img
+									<Image
 										src={avatar8}
 										alt=''
 										className='avatar-xs rounded-circle acitivity-avatar'
@@ -2166,8 +2176,8 @@ const UiOffcanvas = () => {
 					</Link>
 				</div>
 			</Offcanvas>
-		</React.Fragment>
+		</Layout>
 	);
 };
 
-export default UiOffcanvas;
+export default dynamic(() => Promise.resolve(UiOffcanvas), { ssr: false });
