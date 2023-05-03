@@ -1,9 +1,8 @@
-import PrismCode from "../../../Components/Common/Prism";
+import PrismCode from '../../../Components/Common/Prism';
 
 // Default Buttons
 
-const defaultButtonsCode =
-    `
+const defaultButtonsCode = `
 <!-- Base Buttons -->
 <Button color="primary"> Primary </Button>
 
@@ -25,17 +24,16 @@ const defaultButtonsCode =
 `;
 
 const DefaultButtonsExample = () => (
-    <PrismCode
-        code={defaultButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={defaultButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Outline Buttons
 
-const outlineButtonsCode =
-    `
+const outlineButtonsCode = `
 <!-- Outline Buttons -->
 <Button color="primary" outline > primary </Button>
 
@@ -55,17 +53,16 @@ const outlineButtonsCode =
 `;
 
 const OutlineButtonsExample = () => (
-    <PrismCode
-        code={outlineButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={outlineButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Rounded Buttons
 
-const roundedButtonsCode =
-    `
+const roundedButtonsCode = `
 <!-- Rounded Buttons -->
 <Button color="primary" className="rounded-pill"> Primary </Button>
 
@@ -85,17 +82,16 @@ const roundedButtonsCode =
 `;
 
 const RoundedButtonsExample = () => (
-    <PrismCode
-        code={roundedButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={roundedButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Soft Buttons
 
-const softButtonsCode =
-    `
+const softButtonsCode = `
 <!-- Soft Buttons -->
 <Button className="btn-soft-primary"> Primary </Button>
 
@@ -113,19 +109,16 @@ const softButtonsCode =
 `;
 
 const SoftButtonsExample = () => (
-    <PrismCode
-        code={softButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={softButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
-
 
 // Gradient Buttons
 
-const gradientButtonsCode =
-    `
+const gradientButtonsCode = `
 <!-- Gradient Buttons -->
 <Button color="primary" className="bg-gradient"> Primary </Button>
 
@@ -145,17 +138,16 @@ const gradientButtonsCode =
 `;
 
 const GradientButtonsExample = () => (
-    <PrismCode
-        code={gradientButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={gradientButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Animation Buttons
 
-const animationButtonsCode =
-    `
+const animationButtonsCode = `
 <!-- Animation Buttons -->
 <Button color="primary" className="btn-animation" data-text="Primary"> <span>Primary</span> </Button>
 
@@ -173,17 +165,16 @@ const animationButtonsCode =
 `;
 
 const AnimationButtonsExample = () => (
-    <PrismCode
-        code={animationButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={animationButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Buttons with Label
 
-const labelButtonsCode =
-    `
+const labelButtonsCode = `
 <!-- Buttons with Label -->
 <Button color="primary" className="btn-label"> <i className="ri-user-smile-line label-icon align-middle fs-16 me-2"></i> Primary </Button>
 
@@ -205,18 +196,16 @@ const labelButtonsCode =
 `;
 
 const LabelButtonsExample = () => (
-    <PrismCode
-        code={labelButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={labelButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Buttons Sizes
 
-const sizeButtonsCode =
-    `
+const sizeButtonsCode = `
 <!-- Large Button -->
 <Button size="lg" color="primary"> Large button </Button>
 
@@ -229,17 +218,16 @@ const sizeButtonsCode =
 `;
 
 const SizeButtonsExample = () => (
-    <PrismCode
-        code={sizeButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={sizeButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Buttons Width
 
-const widthButtonsCode =
-    `
+const widthButtonsCode = `
 <!-- Width Button -->
 <Button color="primary" className="w-xs"> Xs </Button>
 
@@ -251,17 +239,16 @@ const widthButtonsCode =
 `;
 
 const WidthButtonsExample = () => (
-    <PrismCode
-        code={widthButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={widthButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Buttons Tag
 
-const tagButtonsCode =
-    `
+const tagButtonsCode = `
 <!-- Tag Button -->
 <Link to="#" className="btn btn-primary"> Link </Link>
 
@@ -275,18 +262,16 @@ const tagButtonsCode =
 `;
 
 const TagButtonsExample = () => (
-    <PrismCode
-        code={tagButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={tagButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Buttons Grid
 
-const gridButtonsCode =
-    `
+const gridButtonsCode = `
 <!-- Buttons Grid -->
 <div className="d-grid gap-2">
     <Button color="primary"> Button </Button>
@@ -295,18 +280,16 @@ const gridButtonsCode =
 `;
 
 const GridButtonsExample = () => (
-    <PrismCode
-        code={gridButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={gridButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Buttons Checkbox & Radio
 
-const checkButtonsCode =
-    `<div className="d-flex flex-wrap align-items-center gap-2">
+const checkButtonsCode = `<div className="d-flex flex-wrap align-items-center gap-2">
 <ButtonGroup>
     <Input type="checkbox" className="btn-check" id="btncheck1" defaultChecked="" />
     <Button color="primary" className="mb-0" id="btncheck1"> Checkbox 1 </Button>
@@ -333,18 +316,16 @@ const checkButtonsCode =
 `;
 
 const CheckButtonsExample = () => (
-    <PrismCode
-        code={checkButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={checkButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Buttons Group
 
-const groupButtonsCode =
-    `
+const groupButtonsCode = `
 <!-- Buttons Group -->
 <ButtonGroup>
     <Button color="primary"> Left </Button>
@@ -361,18 +342,16 @@ const groupButtonsCode =
 `;
 
 const GroupButtonsExample = () => (
-    <PrismCode
-        code={groupButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={groupButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Buttons Icon
 
-const iconButtonsCode =
-    `
+const iconButtonsCode = `
 <!-- Buttons Group -->
 <Button color="primary" className="btn-icon"> <i className="ri-map-pin-line" /> </Button>
 <Button color="danger" className="btn-icon"> <i className="ri-delete-bin-5-line" /> </Button>
@@ -386,17 +365,16 @@ const iconButtonsCode =
 `;
 
 const IconButtonsExample = () => (
-    <PrismCode
-        code={iconButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={iconButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Buttons Toolbar
 
-const toolbarButtonsCode =
-    `
+const toolbarButtonsCode = `
 <!-- Buttons Toolbar -->
 <ButtonToolbar>
     <ButtonGroup className="me-2">
@@ -417,17 +395,16 @@ const toolbarButtonsCode =
 `;
 
 const ToolbarButtonsExample = () => (
-    <PrismCode
-        code={toolbarButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={toolbarButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Group Buttons Sizing
 
-const groupSizingButtonsCode =
-    `
+const groupSizingButtonsCode = `
 <!-- Group Buttons Sizing -->
 <ButtonGroup size="lg">
     <Button color="primary">Left</Button>
@@ -449,17 +426,16 @@ const groupSizingButtonsCode =
 `;
 
 const GroupsizingButtonsExample = () => (
-    <PrismCode
-        code={groupSizingButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={groupSizingButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Vertical Variation
 
-const verticalButtonsCode =
-    `<Row>
+const verticalButtonsCode = `<Row>
 <div className="col-auto">
     <ButtonGroup>
         <Button color="primary">1</Button>
@@ -507,16 +483,15 @@ const verticalButtonsCode =
 `;
 
 const VerticalButtonsExample = () => (
-    <PrismCode
-        code={verticalButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={verticalButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Ghost Buttons
-const ghostButtonsCode =
-    `
+const ghostButtonsCode = `
 <!-- Ghost Buttons -->
 
 <Button color="primary" outline className="btn btn-ghost-primary">Primary</Button>
@@ -535,17 +510,15 @@ const ghostButtonsCode =
 `;
 
 const GhostButtonsExample = () => (
-    <PrismCode
-        code={ghostButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={ghostButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-
 // Ghost Buttons
-const loadingbuttonsCode =
-    `
+const loadingbuttonsCode = `
 <!-- Load More Buttons -->
 
 <div className="hstack flex-wrap gap-2 mb-3 mb-lg-0">
@@ -620,16 +593,15 @@ const loadingbuttonsCode =
 `;
 
 const LoadingbuttonsExample = () => (
-    <PrismCode
-        code={loadingbuttonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={loadingbuttonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Border Buttons
-const borderButtonsCode =
-    `
+const borderButtonsCode = `
 <!-- Border Buttons -->
 
 <div className="hstack flex-wrap gap-2 mb-3 mb-lg-0">
@@ -651,16 +623,15 @@ const borderButtonsCode =
 `;
 
 const BorderButtonsExample = () => (
-    <PrismCode
-        code={borderButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={borderButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Custom Toggle Buttons
-const customToggleButtonsCode =
-    `
+const customToggleButtonsCode = `
 <!-- Custom Toggle Buttons -->
 
 <div className="d-flex flex-wrap align-items-center gap-2">
@@ -719,11 +690,33 @@ const customToggleButtonsCode =
 `;
 
 const CustomToggleButtonsExample = () => (
-    <PrismCode
-        code={customToggleButtonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={customToggleButtonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-export { DefaultButtonsExample, OutlineButtonsExample, RoundedButtonsExample, SoftButtonsExample, GradientButtonsExample, AnimationButtonsExample, LabelButtonsExample, SizeButtonsExample, WidthButtonsExample, TagButtonsExample, GridButtonsExample, CheckButtonsExample, GroupButtonsExample, IconButtonsExample, ToolbarButtonsExample, GroupsizingButtonsExample, VerticalButtonsExample, GhostButtonsExample, LoadingbuttonsExample, BorderButtonsExample, CustomToggleButtonsExample };
+export {
+	DefaultButtonsExample,
+	OutlineButtonsExample,
+	RoundedButtonsExample,
+	SoftButtonsExample,
+	GradientButtonsExample,
+	AnimationButtonsExample,
+	LabelButtonsExample,
+	SizeButtonsExample,
+	WidthButtonsExample,
+	TagButtonsExample,
+	GridButtonsExample,
+	CheckButtonsExample,
+	GroupButtonsExample,
+	IconButtonsExample,
+	ToolbarButtonsExample,
+	GroupsizingButtonsExample,
+	VerticalButtonsExample,
+	GhostButtonsExample,
+	LoadingbuttonsExample,
+	BorderButtonsExample,
+	CustomToggleButtonsExample,
+};

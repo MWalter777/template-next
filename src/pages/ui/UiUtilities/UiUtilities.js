@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card, CardBody, CardHeader, Col, Container, Input, Row, } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 // Import Content
 import UiContent from '../../../Components/Common/UiContent';
@@ -807,13 +807,13 @@ const UiUtilities = () => {
 
                                     <div className="live-preview">
                                         <div>
-                                            <p><Link to="#" className="text-success pe-none" tabIndex="-1">This link</Link> can
+                                            <p><Link href="#" className="text-success pe-none" tabIndex="-1">This link</Link> can
                                                 not be clicked.</p>
-                                            <p><Link to="#" className="text-success pe-auto">This link</Link> can be clicked
+                                            <p><Link href="#" className="text-success pe-auto">This link</Link> can be clicked
                                                 (this is default behavior).</p>
-                                            <p className="pe-none mb-0"><Link to="#" className="text-success" tabIndex="-1">This
+                                            <p className="pe-none mb-0"><Link href="#" className="text-success" tabIndex="-1">This
                                                 link</Link> can not be clicked because the <code>pointer-events</code>
-                                                property is inherited from its parent. However, <Link to="#"
+                                                property is inherited from its parent. However, <Link href="#"
                                                     className="pe-auto">this link</Link> has a <code>pe-auto</code> class and
                                                 can be clicked.</p>
                                         </div>

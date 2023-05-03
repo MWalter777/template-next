@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge, Button, Card, CardBody, CardHeader, Col, Container, Row, } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 // Import Content
 import UiContent from '../../../Components/Common/UiContent';
@@ -612,7 +612,7 @@ const UiTypography = () => {
                                     <div className="live-preview">
                                         <p className="text-decoration-underline">This text has a line underneath it.</p>
                                         <p className="text-decoration-line-through">This text has a line going through it.</p>
-                                        <Link to="#" className="text-decoration-none">This link has its text decoration removed</Link>
+                                        <Link href="#" className="text-decoration-none">This link has its text decoration removed</Link>
                                     </div>
                                     <div className="d-none code-view">
                                         <pre className="language-markup">

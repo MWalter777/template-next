@@ -1,9 +1,8 @@
-import PrismCode from "../../../Components/Common/Prism";
+import PrismCode from '../../../Components/Common/Prism';
 
 // Default Badges
 
-const defaultBadgesCode =
-    `
+const defaultBadgesCode = `
 <Badge color="primary"> Primary </Badge>
 
 <Badge color="secondary"> Secondary </Badge>
@@ -22,17 +21,16 @@ const defaultBadgesCode =
 `;
 
 const DefaultBadgesExample = () => (
-    <PrismCode
-        code={defaultBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={defaultBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Soft Badges
 
-const softBadgesCode =
-    `
+const softBadgesCode = `
 <span className="badge badge-soft-primary">Primary</span>
 
 <span className="badge badge-soft-secondary">Secondary</span>
@@ -51,17 +49,16 @@ const softBadgesCode =
 `;
 
 const SoftBadgesExample = () => (
-    <PrismCode
-        code={softBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={softBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Outline Badges
 
-const outlineBadgesCode =
-    `
+const outlineBadgesCode = `
 <span className="badge badge-outline-primary">Primary</span>
 
 <span className="badge badge-outline-secondary">Secondary</span>
@@ -78,18 +75,16 @@ const outlineBadgesCode =
 `;
 
 const OutlineBadgesExample = () => (
-    <PrismCode
-        code={outlineBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={outlineBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Rounded Pill Badges
 
-const roundedPillBadgesCode =
-    `
+const roundedPillBadgesCode = `
 <Badge color="primary" pill> Primary </Badge>
 
 <Badge color="secondary" pill> Secondary </Badge>
@@ -109,17 +104,16 @@ const roundedPillBadgesCode =
 `;
 
 const RoundedPillBadgesExample = () => (
-    <PrismCode
-        code={roundedPillBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={roundedPillBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Label Badges
 
-const labelPillBadgesCode =
-    `
+const labelPillBadgesCode = `
 <Badge color="primary" pill> Primary </Badge>
 
 <Badge color="secondary" pill> Secondary </Badge>
@@ -139,17 +133,16 @@ const labelPillBadgesCode =
 `;
 
 const LabelBadgesExample = () => (
-    <PrismCode
-        code={labelPillBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={labelPillBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Example of the badge used in the HTML Heading
 
-const htmlBadgesCode =
-    `
+const htmlBadgesCode = `
 <h1>Example heading  <Badge color="secondary"> New </Badge> </h1>
 
 <h2>Example heading  <Badge color="secondary"> New </Badge> </h2>
@@ -165,17 +158,16 @@ const htmlBadgesCode =
 `;
 
 const HTMLBadgesExample = () => (
-    <PrismCode
-        code={htmlBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={htmlBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Rounded Pill Badges with soft effect
 
-const roundSoftBadgesCode =
-    `
+const roundSoftBadgesCode = `
 <span className="badge rounded-pill badge-soft-primary">Primary</span>
 
 <span className="badge rounded-pill badge-soft-secondary">Secondary</span>
@@ -194,18 +186,16 @@ const roundSoftBadgesCode =
 `;
 
 const RoundSoftBadgesExample = () => (
-    <PrismCode
-        code={roundSoftBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={roundSoftBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Soft Border Badges
 
-const softBorderBadgesCode =
-    `
+const softBorderBadgesCode = `
 <span className="badge badge-soft-primary badge-border">Primary</span>
 
 <span className="badge badge-soft-secondary badge-border">Secondary</span>
@@ -224,17 +214,15 @@ const softBorderBadgesCode =
 `;
 
 const SoftBorderBadgesExample = () => (
-    <PrismCode
-        code={softBorderBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={softBorderBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-
 // Outline Pill Badges
-const outlinePillBadgesCode =
-    `
+const outlinePillBadgesCode = `
 <span className="badge rounded-pill badge-outline-primary">Primary</span>
 
 <span className="badge rounded-pill badge-outline-secondary">Secondary</span>
@@ -253,16 +241,15 @@ const outlinePillBadgesCode =
 `;
 
 const OutlinePillBadgesExample = () => (
-    <PrismCode
-        code={outlinePillBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={outlinePillBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Button Position Badges
-const buttonPositionBadgesCode =
-    `
+const buttonPositionBadgesCode = `
 <Button color="primary" className="position-relative">
     Mails 
     <Badge pill color="success" className="position-absolute top-0 start-100 translate-middle">+99
@@ -301,17 +288,16 @@ const buttonPositionBadgesCode =
 `;
 
 const ButtonPositionBadgesExample = () => (
-    <PrismCode
-        code={buttonPositionBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={buttonPositionBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Badges With Button
 
-const buttonBadgesCode =
-    `
+const buttonBadgesCode = `
 <Button color="primary">
     Notifications <Badge color="success" className="ms-1">4</Badge>
 </Button>
@@ -324,17 +310,16 @@ const buttonBadgesCode =
 `;
 
 const ButtonBadgesExample = () => (
-    <PrismCode
-        code={buttonBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={buttonBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Gradient Badges
 
-const gradientBadgesCode =
-    `
+const gradientBadgesCode = `
 <Badge className="badge-gradient-primary">Primary</Badge>
 
 <Badge className="badge-gradient-secondary">Secondary</Badge>
@@ -351,12 +336,24 @@ const gradientBadgesCode =
 `;
 
 const GradientBadgesExample = () => (
-    <PrismCode
-        code={gradientBadgesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={gradientBadgesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-
-export { DefaultBadgesExample, RoundedPillBadgesExample, LabelBadgesExample, HTMLBadgesExample, SoftBadgesExample, OutlineBadgesExample, RoundSoftBadgesExample, SoftBorderBadgesExample, OutlinePillBadgesExample, ButtonPositionBadgesExample, ButtonBadgesExample, GradientBadgesExample };
+export {
+	DefaultBadgesExample,
+	RoundedPillBadgesExample,
+	LabelBadgesExample,
+	HTMLBadgesExample,
+	SoftBadgesExample,
+	OutlineBadgesExample,
+	RoundSoftBadgesExample,
+	SoftBorderBadgesExample,
+	OutlinePillBadgesExample,
+	ButtonPositionBadgesExample,
+	ButtonBadgesExample,
+	GradientBadgesExample,
+};
