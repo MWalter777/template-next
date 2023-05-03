@@ -5,6 +5,19 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 const Layout = ({ children, title = 'Dashboard', content = '' }) => {
+	const [isOpenSidebar, setIsOpenSidebar] = useState({
+		isOpenSidebar: true,
+		className: 'vertical-collpsed',
+	});
+	const toggleSidebar = () => {
+		setIsOpenSidebar(() => ({
+			...isOpenSidebar,
+			isOpenSidebar: !isOpenSidebar.isOpenSidebar,
+			className: !isOpenSidebar.isOpenSidebar
+				? 'vertical-collpsed'
+				: 'vertical-hidden',
+		}));
+	};
 	return (
 		<>
 			<Head>
@@ -14,9 +27,9 @@ const Layout = ({ children, title = 'Dashboard', content = '' }) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div id='layout-wrapper'>
-				<Header headerClass={'topbar-shadow'} />
+				<Header toggleSidebar={toggleSidebar} headerClass={'topbar-shadow'} />
 
-				<Sidebar />
+				<Sidebar className={isOpenSidebar.className} />
 				<div className='main-content'>
 					<div className='page-content'>{children}</div>
 					<Footer />

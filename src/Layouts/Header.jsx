@@ -7,7 +7,6 @@ import logoSm from '../assets/images/logo-sm.png';
 import logoDark from '../assets/images/logo-dark.png';
 import logoLight from '../assets/images/logo-light.png';
 
-import SearchOption from '../Components/Common/SearchOption';
 import WebAppsDropdown from '../Components/Common/WebAppsDropdown';
 import MyCartDropdown from '../Components/Common/MyCartDropdown';
 import FullScreenDropdown from '../Components/Common/FullScreenDropdown';
@@ -15,7 +14,7 @@ import NotificationDropdown from '../Components/Common/NotificationDropdown';
 import ProfileDropdown from '../Components/Common/ProfileDropdown';
 import LightDark from '../Components/Common/LightDark';
 
-const Header = ({ headerClass }) => {
+const Header = ({ headerClass, toggleSidebar = () => {} }) => {
 	const [search, setSearch] = useState(false);
 
 	const toogleSearch = () => {
@@ -51,6 +50,7 @@ const Header = ({ headerClass }) => {
 							type='button'
 							className='btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger'
 							id='topnav-hamburger-icon'
+							onClick={toggleSidebar}
 						>
 							<span className='hamburger-icon'>
 								<span></span>

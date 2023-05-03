@@ -8,10 +8,10 @@ import { Container } from 'reactstrap';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Sidebar = () => {
+const Sidebar = ({ className = '' }) => {
 	return (
 		<Fragment>
-			<div className='app-menu navbar-menu'>
+			<div className={`app-menu navbar-menu ${className}`}>
 				<div className='navbar-brand-box'>
 					<Link href='/' className='logo logo-dark'>
 						<span className='logo-sm'>
