@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-
 import UpgradeAccountNotise from '../../Components/DashboardAnalytics/UpgradeAccountNotise';
 import UsersByDevice from '../../Components/DashboardAnalytics/UsersByDevice';
 import Widget from '../../Components/DashboardAnalytics/Widget';
@@ -10,33 +9,31 @@ import AudiencesSessions from '../../Components/DashboardAnalytics/AudiencesSess
 import LiveUsers from '../../Components/DashboardAnalytics/LiveUsers';
 import TopReferrals from '../../Components/DashboardAnalytics/TopReferrals';
 import TopPages from '../../Components/DashboardAnalytics/TopPages';
+import Layout from '@/Layouts';
 
 const DashboardAnalytics = () => {
-	const title = 'Analytics | Velzon - React Admin & Dashboard Template';
 	return (
-		<React.Fragment>
-			<div className='page-content'>
-				<Container fluid>
-					<BreadCrumb title='Analytics' pageTitle='Dashboards' />
-					<Row>
-						<Col xxl={5}>
-							<UpgradeAccountNotise />
-							<Widget />
-						</Col>
-						<LiveUsers />
-					</Row>
-					<Row>
-						<AudiencesMetrics />
-						<AudiencesSessions />
-					</Row>
-					<Row>
-						<UsersByDevice />
-						<TopReferrals />
-						<TopPages />
-					</Row>
-				</Container>
-			</div>
-		</React.Fragment>
+		<Layout title='Analytics | Velzon - React Admin & Dashboard Template'>
+			<Container fluid>
+				<BreadCrumb link='/' title='Analytics' pageTitle='Dashboards' />
+				<Row>
+					<Col xxl={5}>
+						<UpgradeAccountNotise />
+						<Widget />
+					</Col>
+					<LiveUsers />
+				</Row>
+				<Row>
+					<AudiencesMetrics />
+					<AudiencesSessions />
+				</Row>
+				<Row>
+					<UsersByDevice />
+					<TopReferrals />
+					<TopPages />
+				</Row>
+			</Container>
+		</Layout>
 	);
 };
 

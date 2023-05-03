@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Col, Row } from 'reactstrap';
 
-const BreadCrumb = ({ title, pageTitle }) => {
+const BreadCrumb = ({ title, pageTitle, link = '/' }) => {
 	return (
 		<React.Fragment>
 			<Row>
@@ -13,7 +13,7 @@ const BreadCrumb = ({ title, pageTitle }) => {
 						<div className='page-title-right'>
 							<ol className='breadcrumb m-0'>
 								<li className='breadcrumb-item'>
-									<Link href='#'>{pageTitle}</Link>
+									<Link href={link}>{pageTitle}</Link>
 								</li>
 								<li className='breadcrumb-item active'>{title}</li>
 							</ol>

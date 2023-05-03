@@ -58,8 +58,6 @@ const Header = ({ headerClass }) => {
 								<span></span>
 							</span>
 						</button>
-
-						<SearchOption />
 					</div>
 
 					<div className='d-flex align-items-center'>

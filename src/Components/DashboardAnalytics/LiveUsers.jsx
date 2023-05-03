@@ -6,7 +6,7 @@ import { CountriesCharts } from './DashboardAnalyticsCharts';
 import Vector from './VectorMap';
 
 const LiveUsers = () => {
-	const [countryData, setcountryData] = useState([]);
+	const [countryData, setcountryData] = useState([20.56, 89.02, 35.89]);
 	const [periodType, setPeriodType] = useState('halfyearly');
 
 	const onChangeChartPeriod = (pType) => {
@@ -32,8 +32,11 @@ const LiveUsers = () => {
 							</div>
 
 							<CardBody>
-								<div className='text-center' style={{ height: '252px' }}>
-									<Vector value='world_mill' color='#f3f6f9' />
+								<div
+									className='text-center'
+									style={{ height: '252px', overflow: 'hidden' }}
+								>
+									<Vector width='100%' value='world_mill' color='#071522' />
 								</div>
 
 								<div className='table-responsive table-card mt-3'>
