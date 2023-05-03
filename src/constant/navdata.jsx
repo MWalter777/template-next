@@ -200,18 +200,6 @@ export const menuItems = [
 				parentId: 'baseUi',
 			},
 			{
-				id: 'media',
-				label: 'Media object',
-				link: '/ui/media',
-				parentId: 'baseUi',
-			},
-			{
-				id: 'embedvideo',
-				label: 'Embed Video',
-				link: '/ui/embed-video',
-				parentId: 'baseUi',
-			},
-			{
 				id: 'typography',
 				label: 'Typography',
 				link: '/ui/typography',
