@@ -269,12 +269,6 @@ export const menuItems = [
 				parentId: 'forms',
 			},
 			{
-				id: 'rangeslider',
-				label: 'Range Slider',
-				link: '/forms/range-sliders',
-				parentId: 'forms',
-			},
-			{
 				id: 'validation',
 				label: 'Validation',
 				link: '/forms/validation',
