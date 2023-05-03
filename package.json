@@ -18,11 +18,13 @@
 		"react-apexcharts": "^1.4.0",
 		"react-countup": "^6.4.2",
 		"react-dom": "18.2.0",
+		"react-flatpickr": "^3.10.13",
 		"react-i18next": "^12.2.2",
 		"react-jvectormap": "^0.0.16",
 		"react-redux": "^8.0.5",
 		"reactstrap": "^9.1.9",
-		"simplebar-react": "^3.2.4"
+		"simplebar-react": "^3.2.4",
+		"swiper": "^9.2.4"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.8",
