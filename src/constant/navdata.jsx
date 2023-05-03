@@ -295,7 +295,7 @@ export const menuItems = [
 			{
 				id: 'formlayouts',
 				label: 'Form Layouts',
-				link: '/forms/layouts',
+				link: '/forms/form-layouts',
 				parentId: 'forms',
 			},
 			{
