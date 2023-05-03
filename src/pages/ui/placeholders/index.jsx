@@ -20,6 +20,7 @@ import {
 } from '../../../Components/ui-common/UiPlaceholdersCode';
 import Layout from '@/Layouts';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 const UiPlaceholders = () => {
 	return (
@@ -225,4 +226,4 @@ const UiPlaceholders = () => {
 	);
 };
 
-export default UiPlaceholders;
+export default dynamic(() => Promise.resolve(UiPlaceholders), { ssr: false });
