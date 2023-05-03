@@ -22,12 +22,22 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 
 import logoLight from '../../assets/images/logo-light.png';
+import { useRouter } from 'next/router';
 
 const Login = (props) => {
+	const router = useRouter();
 	const [userLogin, setUserLogin] = useState([]);
 	const [passwordShow, setPasswordShow] = useState(false);
 	const [error, setError] = useState('');
 	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		const { 'access-denied': accessDenied } = router.query;
+		console.log(router.query);
+		if (accessDenied !== undefined) {
+			setError('Access Denied. Please login to continue');
+		}
+	}, [router.query]);
 
 	const validation = useFormik({
 		// enableReinitialize : use this flag when initial values needs to be changed
