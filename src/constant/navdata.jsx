@@ -350,24 +350,6 @@ export const menuItems = [
 				link: '/icons/materialdesign',
 				parentId: 'icons',
 			},
-			{
-				id: 'lineawesome',
-				label: 'Line Awesome',
-				link: '/icons/lineawesome',
-				parentId: 'icons',
-			},
-			{
-				id: 'feather',
-				label: 'Feather',
-				link: '/icons/feather',
-				parentId: 'icons',
-			},
-			{
-				id: 'crypto',
-				label: 'Crypto SVG',
-				link: '/icons/crypto',
-				parentId: 'icons',
-			},
 		],
 	},
 ];
