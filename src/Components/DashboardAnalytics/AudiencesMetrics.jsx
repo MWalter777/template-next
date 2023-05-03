@@ -4,7 +4,12 @@ import CountUp from 'react-countup';
 import { AudiencesCharts } from './DashboardAnalyticsCharts';
 
 const AudiencesMetrics = () => {
-	const [chartData, setchartData] = useState([]);
+	const [chartData, setchartData] = useState([
+		{
+			name: 'serie-test',
+			data: [12, 23, 45, 56, 23, 45, 65, 34, 34, 23, 34, 22],
+		},
+	]);
 
 	const onChangeChartPeriod = (pType) => {
 		console.log(pType);

@@ -4,8 +4,8 @@ import ReactApexChart from 'react-apexcharts';
 import getChartColorsArray from '../../Components/Common/ChartsDynamicColor';
 
 const AudiencesCharts = ({ dataColors, series }) => {
-	var chartAudienceColumnChartsColors = getChartColorsArray(dataColors);
-	var options = {
+	const chartAudienceColumnChartsColors = getChartColorsArray(dataColors);
+	const options = {
 		chart: {
 			type: 'bar',
 			height: 309,
@@ -82,16 +82,14 @@ const AudiencesCharts = ({ dataColors, series }) => {
 		},
 	};
 	return (
-		<React.Fragment>
-			<ReactApexChart
-				dir='ltr'
-				options={options}
-				series={series}
-				type='bar'
-				height='309'
-				className='apex-charts'
-			/>
-		</React.Fragment>
+		<ReactApexChart
+			dir='ltr'
+			options={options}
+			series={series}
+			type='bar'
+			height='309'
+			className='apex-charts'
+		/>
 	);
 };
 
@@ -173,8 +171,8 @@ const AudiencesSessionsCharts = ({ dataColors, series }) => {
 };
 
 const CountriesCharts = ({ dataColors, series }) => {
-	var barchartCountriesColors = getChartColorsArray(dataColors);
-	var options = {
+	const barchartCountriesColors = getChartColorsArray(dataColors);
+	const options = {
 		chart: {
 			type: 'bar',
 			height: 436,
@@ -225,16 +223,14 @@ const CountriesCharts = ({ dataColors, series }) => {
 		},
 	};
 	return (
-		<React.Fragment>
-			<ReactApexChart
-				dir='ltr'
-				options={options}
-				series={series}
-				type='bar'
-				height='436'
-				className='apex-charts'
-			/>
-		</React.Fragment>
+		<ReactApexChart
+			dir='ltr'
+			options={options}
+			series={series}
+			type='bar'
+			height='436'
+			className='apex-charts'
+		/>
 	);
 };
 
@@ -288,16 +284,14 @@ const UsersByDeviceCharts = ({ dataColors, series }) => {
 		colors: dountchartUserDeviceColors,
 	};
 	return (
-		<React.Fragment>
-			<ReactApexChart
-				dir='ltr'
-				options={options}
-				series={series}
-				type='donut'
-				height='219'
-				className='apex-charts'
-			/>
-		</React.Fragment>
+		<ReactApexChart
+			dir='ltr'
+			options={options}
+			series={series}
+			type='donut'
+			height='219'
+			className='apex-charts'
+		/>
 	);
 };
 

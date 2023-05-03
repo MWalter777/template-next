@@ -11,7 +11,9 @@ import {
 import { AudiencesSessionsCharts } from './DashboardAnalyticsCharts';
 
 const AudiencesSessions = () => {
-	const [chartData, setchartData] = useState([]);
+	const [chartData, setchartData] = useState([
+		{ name: 'test', data: [12, 32, 34, 12, 34, 4] },
+	]);
 	const [seletedMonth, setSeletedMonth] = useState('today');
 	const onChangeChartPeriod = (pType) => {
 		setSeletedMonth(pType);

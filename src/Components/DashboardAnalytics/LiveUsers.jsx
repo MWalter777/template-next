@@ -6,7 +6,12 @@ import { CountriesCharts } from './DashboardAnalyticsCharts';
 import Vector from './VectorMap';
 
 const LiveUsers = () => {
-	const [countryData, setcountryData] = useState([20.56, 89.02, 35.89]);
+	const [countryData, setcountryData] = useState([
+		{
+			name: 'serie-test',
+			data: [20.56, 89.02, 35.89, 34, 45, 54, 34, 45, 65, 45],
+		},
+	]);
 	const [periodType, setPeriodType] = useState('halfyearly');
 
 	const onChangeChartPeriod = (pType) => {
