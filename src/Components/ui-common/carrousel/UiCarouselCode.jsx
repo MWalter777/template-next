@@ -1,9 +1,9 @@
-import PrismCode from "../../../Components/Common/Prism";
+import React from 'react';
+import PrismCode from '../../Common/Prism';
 
 // Slides Only
 
-const slideOnlyCode =
-    `
+const slideOnlyCode = `
 <!-- Slides Only -->
 <UncontrolledCarousel
     controls={false}
@@ -33,16 +33,15 @@ const slideOnlyCode =
 `;
 
 const SlideOnlyExample = () => (
-    <PrismCode
-        code={slideOnlyCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={slideOnlyCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // With Controls
-const withControlCode =
-    `
+const withControlCode = `
 <!-- With Controls -->
 <UncontrolledCarousel
     interval={4000}
@@ -71,16 +70,15 @@ const withControlCode =
 `;
 
 const WithControlExample = () => (
-    <PrismCode
-        code={withControlCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={withControlCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // with Indicators
-const withIndicatorCode =
-    `
+const withIndicatorCode = `
     <!-- With Indicators -->
 <UncontrolledCarousel
   interval={4000}
@@ -108,16 +106,15 @@ const withIndicatorCode =
 `;
 
 const WithIndicatorExample = () => (
-    <PrismCode
-        code={withIndicatorCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={withIndicatorCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // with Captions
-const withCaptionCode =
-    `
+const withCaptionCode = `
     <!-- With Captions -->
 <UncontrolledCarousel
     interval={4000}
@@ -145,16 +142,15 @@ const withCaptionCode =
 `;
 
 const WithCaptionExample = () => (
-    <PrismCode
-        code={withCaptionCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={withCaptionCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Crossfade Animation
-const crossFadeCode =
-    `
+const crossFadeCode = `
 <!-- With Crossfade Animation -->
 <UncontrolledCarousel
   interval={4000}
@@ -182,16 +178,15 @@ const crossFadeCode =
 `;
 
 const CrossFadeExample = () => (
-    <PrismCode
-        code={crossFadeCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={crossFadeCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Individual carousel-item Interval
-const induvidualIntervalCode =
-    `
+const induvidualIntervalCode = `
 <!-- Individual Slide -->
 <UncontrolledCarousel
     interval={4000}
@@ -220,16 +215,15 @@ const induvidualIntervalCode =
 `;
 
 const InduvidualIntervalExample = () => (
-    <PrismCode
-        code={induvidualIntervalCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={induvidualIntervalCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Disable Touch Swiping
-const disableTouchCode =
-    `
+const disableTouchCode = `
 <!-- Disable Touch Swiping -->
 <UncontrolledCarousel
     interval={false}
@@ -259,16 +253,15 @@ const disableTouchCode =
 `;
 
 const DisableTouchExample = () => (
-    <PrismCode
-        code={disableTouchCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={disableTouchCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Dark Variant
-const darkVariantCode =
-    `
+const darkVariantCode = `
     <!-- Dark Variant -->
 <UncontrolledCarousel
     dark={true}
@@ -297,11 +290,20 @@ const darkVariantCode =
 `;
 
 const DarkVariantExample = () => (
-    <PrismCode
-        code={darkVariantCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={darkVariantCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-export { SlideOnlyExample, WithControlExample, WithIndicatorExample, WithCaptionExample, CrossFadeExample, InduvidualIntervalExample, DisableTouchExample, DarkVariantExample };
+export {
+	SlideOnlyExample,
+	WithControlExample,
+	WithIndicatorExample,
+	WithCaptionExample,
+	CrossFadeExample,
+	InduvidualIntervalExample,
+	DisableTouchExample,
+	DarkVariantExample,
+};
