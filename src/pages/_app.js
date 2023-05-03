@@ -1,4 +1,5 @@
 import React from 'react';
+import 'cleave.js/dist/addons/cleave-phone.in';
 import '@/assets/globals.scss';
 import '@/assets/scss/jquery-jvectormap.scss';
 import '@/assets/scss/themes.scss';
