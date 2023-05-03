@@ -1,9 +1,9 @@
-import PrismCode from "../../../Components/Common/Prism";
+import React from 'react';
+import PrismCode from '../Common/Prism';
 
 // Single Button Dropdown
 
-const singleButtonDropdownCode =
-    `
+const singleButtonDropdownCode = `
 <!-- Single Button Dropdown -->
 <UncontrolledDropdown>
     <DropdownToggle tag="button" className="btn btn-secondary" id="dropdownMenuButton">
@@ -29,16 +29,15 @@ const singleButtonDropdownCode =
 `;
 
 const SingleButtonDropdownExample = () => (
-    <PrismCode
-        code={singleButtonDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={singleButtonDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Dropdown Color Variant
-const colorDropdownCode =
-    `
+const colorDropdownCode = `
 <!-- Dropdown Variant -->
 <ButtonGroup>
     <UncontrolledDropdown>
@@ -163,16 +162,15 @@ const colorDropdownCode =
 `;
 
 const ColorDropdownExample = () => (
-    <PrismCode
-        code={colorDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={colorDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Split Button Dropdown
-const splitButtonDropdownCode =
-    `
+const splitButtonDropdownCode = `
 <!-- Split Button Dropdown -->
 <ButtonGroup>
     <UncontrolledButtonDropdown>
@@ -296,16 +294,15 @@ const splitButtonDropdownCode =
 `;
 
 const SplitButtonDropdownExample = () => (
-    <PrismCode
-        code={splitButtonDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={splitButtonDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Dropdown Sizing
-const sizingDropdownCode =
-    `
+const sizingDropdownCode = `
 <!-- Dropdown Sizing -->
 <ButtonGroup>
     <UncontrolledDropdown>
@@ -369,16 +366,15 @@ const sizingDropdownCode =
 `;
 
 const SizingDropdownExample = () => (
-    <PrismCode
-        code={sizingDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={sizingDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Dark Dropdowns
-const darkDropdownCode =
-    `
+const darkDropdownCode = `
 <!-- Dark Dropdowns -->
 <UncontrolledDropdown>
     <DropdownToggle tag="button" className="btn btn-secondary" id="dropdownMenuButton2">
@@ -395,16 +391,15 @@ const darkDropdownCode =
 `;
 
 const DarkDropdownExample = () => (
-    <PrismCode
-        code={darkDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={darkDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Alignment options
-const alignDropdownCode =
-    `
+const alignDropdownCode = `
 <!-- Alignment options -->
 <ButtonGroup>
     <UncontrolledDropdown>
@@ -499,16 +494,15 @@ const alignDropdownCode =
 `;
 
 const AlignDropdownExample = () => (
-    <PrismCode
-        code={alignDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={alignDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Dropdown Options
-const optionDropdownCode =
-    `
+const optionDropdownCode = `
 <!-- Dropdown Options -->
 <UncontrolledDropdown className="me-1">
 <DropdownToggle tag="button" className="btn btn-secondary" id="dropdownMenuOffset">
@@ -539,16 +533,15 @@ const optionDropdownCode =
 `;
 
 const OptionDropdownExample = () => (
-    <PrismCode
-        code={optionDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={optionDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Auto Close Behavior
-const autoCloseDropdownCode =
-    `
+const autoCloseDropdownCode = `
 <!-- Default dropdown -->
 <ButtonGroup>
     <UncontrolledDropdown>
@@ -604,16 +597,15 @@ const autoCloseDropdownCode =
 `;
 
 const AutoCloseDropdownExample = () => (
-    <PrismCode
-        code={autoCloseDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={autoCloseDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Dropdown Menu Item Color
-const menuItemDropdownCode =
-    `
+const menuItemDropdownCode = `
 <!-- Dropdown Menu Item Color -->
 <div>
     <h6 className="font-size-13 mb-3">Dropdown Menu Success link example</h6>
@@ -720,16 +712,15 @@ const menuItemDropdownCode =
 `;
 
 const MenuItemDropdownExample = () => (
-    <PrismCode
-        code={menuItemDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={menuItemDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Menu Content
-const menuContentDropdownCode =
-    `
+const menuContentDropdownCode = `
 <!-- Menu Content -->
 <ButtonGroup>
     <UncontrolledDropdown>
@@ -795,16 +786,15 @@ const menuContentDropdownCode =
 `;
 
 const MenuContentDropdownExample = () => (
-    <PrismCode
-        code={menuContentDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={menuContentDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Notifications
-const notificationDropdownCode =
-    `
+const notificationDropdownCode = `
 <!-- Notifications -->
 <div className="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0 d-inline-block position-relative w-100" aria-labelledby="page-header-notifications-dropdown" style={{ zIndex: "1" }}>
     <div className="dropdown-head bg-primary bg-pattern rounded-top">
@@ -1010,11 +1000,23 @@ const notificationDropdownCode =
 `;
 
 const NotificationDropdownExample = () => (
-    <PrismCode
-        code={notificationDropdownCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={notificationDropdownCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-export { SingleButtonDropdownExample, ColorDropdownExample, SplitButtonDropdownExample, SizingDropdownExample, DarkDropdownExample, AlignDropdownExample, OptionDropdownExample, AutoCloseDropdownExample, MenuItemDropdownExample, MenuContentDropdownExample, NotificationDropdownExample };
+export {
+	SingleButtonDropdownExample,
+	ColorDropdownExample,
+	SplitButtonDropdownExample,
+	SizingDropdownExample,
+	DarkDropdownExample,
+	AlignDropdownExample,
+	OptionDropdownExample,
+	AutoCloseDropdownExample,
+	MenuItemDropdownExample,
+	MenuContentDropdownExample,
+	NotificationDropdownExample,
+};
