@@ -36,7 +36,7 @@ import {
 	FullscreenResponsiveExample,
 	AnimationModalExample,
 	PositionModalExample,
-} from './UiModalCode';
+} from '../../../Components/ui-common/UiModalCode';
 
 // Import Images
 import loginImg from '../../../assets/images/modals/login.png';
@@ -44,6 +44,7 @@ import signupImg from '../../../assets/images/modals/signup.png';
 import subscribeImg from '../../../assets/images/modals/subscribe.png';
 import paymentImg from '../../../assets/images/modals/success-payment.png';
 import authbg from '../../../assets/images/auth-one-bg.jpg';
+import Layout from '@/Layouts';
 
 const UiModals = () => {
 	const [modal_standard, setmodal_standard] = useState(false);
@@ -218,627 +219,573 @@ const UiModals = () => {
 		setmodal_signUpModals(!modal_signUpModals);
 	}
 
-	document.title = 'Modals | Velzon - React Admin & Dashboard Template';
-
 	return (
-		<React.Fragment>
+		<Layout title='Modals | Velzon - React Admin & Dashboard Template'>
 			<UiContent />
-			<div className='page-content'>
-				<Container fluid>
-					<BreadCrumb title='Modals' pageTitle='Base UI' />
-					<Row>
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Default Modal' />
+			<Container fluid>
+				<BreadCrumb title='Modals' pageTitle='Base UI' />
+				<Row>
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Default Modal' />
 
-								<CardBody>
-									<p className='text-muted text-muted'>
-										A default modal Example.
-									</p>
-									<div className='live-preview'>
-										<div>
-											<Button color='primary' onClick={() => tog_standard()}>
-												Standard Modal
-											</Button>
-										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<DefaultModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Vertically Centered Modal' />
-
-								<CardBody>
-									<p className='text-muted'>
-										Use <code>modal-dialog-centered</code> class to show
-										vertically center the modal.
-									</p>
-									<div className='live-preview'>
-										<div>
-											<Button color='primary' onClick={() => tog_center()}>
-												Center Modal
-											</Button>
-										</div>
-									</div>
-
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<CenteredModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
-
-					<Row>
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Grids in Modals' />
-								<CardBody>
-									<div className='live-preview'>
-										<Button color='primary' onClick={() => tog_grid()}>
-											Launch Demo Modal
+							<CardBody>
+								<p className='text-muted text-muted'>
+									A default modal Example.
+								</p>
+								<div className='live-preview'>
+									<div>
+										<Button color='primary' onClick={() => tog_standard()}>
+											Standard Modal
 										</Button>
 									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<GridsModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<DefaultModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Vertically Centered Modal' />
 
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Static Backdrop Modal' />
-								<CardBody>
-									<div className='live-preview'>
-										<div>
-											<Button color='primary' onClick={() => tog_backdrop()}>
-												Static Backdrop Modal
-											</Button>
-										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<StaticBackdropModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
-
-					<Row>
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Toggle Between Modal' />
-								<CardBody>
-									<div className='live-preview'>
-										<div>
-											<Button color='primary' onClick={() => tog_togFirst()}>
-												Open First Modal
-											</Button>
-										</div>
-									</div>
-
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<TogglebetweenExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Tooltips and Popovers' />
-								<CardBody>
-									<div className='live-preview'>
-										<Button color='primary' onClick={() => tog_tooltip()}>
-											Launch Demo Modal
+							<CardBody>
+								<p className='text-muted'>
+									Use <code>modal-dialog-centered</code> class to show
+									vertically center the modal.
+								</p>
+								<div className='live-preview'>
+									<div>
+										<Button color='primary' onClick={() => tog_center()}>
+											Center Modal
 										</Button>
 									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<TooltipModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
+								</div>
 
-					<Row>
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Scrollable Modal' />
-								<CardBody>
-									<div className='live-preview'>
-										<div>
-											<Button color='primary' onClick={() => tog_scroll()}>
-												Scrollable Modal
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<CenteredModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+
+				<Row>
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Grids in Modals' />
+							<CardBody>
+								<div className='live-preview'>
+									<Button color='primary' onClick={() => tog_grid()}>
+										Launch Demo Modal
+									</Button>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<GridsModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Static Backdrop Modal' />
+							<CardBody>
+								<div className='live-preview'>
+									<div>
+										<Button color='primary' onClick={() => tog_backdrop()}>
+											Static Backdrop Modal
+										</Button>
+									</div>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<StaticBackdropModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+
+				<Row>
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Toggle Between Modal' />
+							<CardBody>
+								<div className='live-preview'>
+									<div>
+										<Button color='primary' onClick={() => tog_togFirst()}>
+											Open First Modal
+										</Button>
+									</div>
+								</div>
+
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<TogglebetweenExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Tooltips and Popovers' />
+							<CardBody>
+								<div className='live-preview'>
+									<Button color='primary' onClick={() => tog_tooltip()}>
+										Launch Demo Modal
+									</Button>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<TooltipModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+
+				<Row>
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Scrollable Modal' />
+							<CardBody>
+								<div className='live-preview'>
+									<div>
+										<Button color='primary' onClick={() => tog_scroll()}>
+											Scrollable Modal
+										</Button>
+									</div>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<ScrollableModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+
+					<Col xxl={6}>
+						<Card>
+							<PreviewCardHeader title='Varying Modal Content' />
+							<CardBody>
+								<div className='live-preview'>
+									<div>
+										<div className='hstack gap-2 flex-wrap'>
+											<Button color='primary' onClick={() => tog_varying1()}>
+												Open Modal for Mary
+											</Button>
+											<Button color='primary' onClick={() => tog_varying2()}>
+												Open Modal for Jennifer
+											</Button>
+											<Button color='primary' onClick={() => tog_varying3()}>
+												Open Modal for Roderick
 											</Button>
 										</div>
 									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<ScrollableModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<VaryingModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
 
-						<Col xxl={6}>
-							<Card>
-								<PreviewCardHeader title='Varying Modal Content' />
-								<CardBody>
-									<div className='live-preview'>
-										<div>
-											<div className='hstack gap-2 flex-wrap'>
-												<Button color='primary' onClick={() => tog_varying1()}>
-													Open Modal for Mary
-												</Button>
-												<Button color='primary' onClick={() => tog_varying2()}>
-													Open Modal for Jennifer
-												</Button>
-												<Button color='primary' onClick={() => tog_varying3()}>
-													Open Modal for Roderick
-												</Button>
-											</div>
-										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<VaryingModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
-
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Optional Sizes' />
-								<CardBody>
-									<p className='text-muted'>
-										Use <code>modal-fullscreen</code>, <code>modal-xl</code>,{' '}
-										<code>modal-lg</code>, or <code>modal-sm</code> class to
-										modal-dialog class to set different size modal respectively.
-									</p>
-									<div className='live-preview'>
-										<div>
-											<div className='hstack flex-wrap gap-2'>
-												{/* 
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Optional Sizes' />
+							<CardBody>
+								<p className='text-muted'>
+									Use <code>modal-fullscreen</code>, <code>modal-xl</code>,{' '}
+									<code>modal-lg</code>, or <code>modal-sm</code> class to
+									modal-dialog class to set different size modal respectively.
+								</p>
+								<div className='live-preview'>
+									<div>
+										<div className='hstack flex-wrap gap-2'>
+											{/* 
                                                 // <!-- Fullscreen modal --> */}
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen(true)}
-												>
-													Fullscreen Modal
-												</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_fullscreen(true)}
+											>
+												Fullscreen Modal
+											</Button>
 
-												{/* 
+											{/* 
                                                 // <!-- Extra Large modal --> */}
-												<Button color='info' onClick={() => tog_xlarge(true)}>
-													Extra large Modal
-												</Button>
+											<Button color='info' onClick={() => tog_xlarge(true)}>
+												Extra large Modal
+											</Button>
 
-												{/* 
+											{/* 
                                                 // <!-- Large modal --> */}
-												<Button color='success' onClick={() => tog_large(true)}>
-													Large Modal
-												</Button>
+											<Button color='success' onClick={() => tog_large(true)}>
+												Large Modal
+											</Button>
 
-												{/* 
+											{/* 
                                                 // <!-- Small modal --> */}
-												<Button color='danger' onClick={() => tog_small(true)}>
-													Small Modal
-												</Button>
-											</div>
+											<Button color='danger' onClick={() => tog_small(true)}>
+												Small Modal
+											</Button>
 										</div>
 									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<OptionalModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<OptionalModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
 
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Fullscreen Responsive Modals' />
-								<CardBody>
-									<p className='text-muted text-muted'>
-										Below mentioned modifier classes are used to show fullscreen
-										modal as per minimum screen requirement.
-									</p>
-									<div className='live-preview'>
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Fullscreen Responsive Modals' />
+							<CardBody>
+								<p className='text-muted text-muted'>
+									Below mentioned modifier classes are used to show fullscreen
+									modal as per minimum screen requirement.
+								</p>
+								<div className='live-preview'>
+									<div>
+										<div className='hstack gap-2 flex-wrap'>
+											<Button color='primary' onClick={() => tog_fullscreen1()}>
+												{' '}
+												Fullscreen modal{' '}
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_fullscreen_sm()}
+											>
+												Full Screen Below sm
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_fullscreen_md()}
+											>
+												Full Screen Below md
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_fullscreen_lg()}
+											>
+												Full Screen Below lg
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_fullscreen_xl()}
+											>
+												Full Screen Below xl
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_fullscreen_xxl()}
+											>
+												Full Screen Below xxl
+											</Button>
+										</div>
+									</div>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<FullscreenResponsiveExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Animation Modals' />
+							<CardBody>
+								<p className='text-muted'>
+									Use <code>fadeInRight</code>, <code>fadeInLeft</code>,{' '}
+									<code>fadeInUp</code>, <code>flip</code>, or{' '}
+									<code>zoomIn</code> class to modal class to set different
+									modal with animation effect respectively.
+								</p>
+								<div className='live-preview'>
+									<div>
+										<div className='hstack gap-2 flex-wrap'>
+											<Button
+												color='primary'
+												onClick={() => tog_animationRight()}
+											>
+												Fade In Right Modal
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_animationLeft()}
+											>
+												Fade In Left Modal
+											</Button>
+											<Button color='primary' onClick={() => tog_animationUp()}>
+												Fade In Up Modal
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_animationFlip()}
+											>
+												Flip Modal
+											</Button>
+											<Button
+												color='primary'
+												onClick={() => tog_animationZoom()}
+											>
+												Zoom In Modal
+											</Button>
+										</div>
+									</div>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<AnimationModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+
+				<Row>
+					<Col lg={12}>
+						<Card>
+							<PreviewCardHeader title='Modal Positions' />
+							<CardBody>
+								<p className='text-muted text-muted'>
+									Use <code>modal-dialog-right</code>,{' '}
+									<code>modal-dialog-bottom</code>, or{' '}
+									<code>modal-dialog-bottom-right</code> class to modal-dialog
+									class to set modal at different positions respectively.
+								</p>
+								<div className='live-preview'>
+									<div>
+										<div className='hstack gap-2 flex-wrap'>
+											<Button color='primary' onClick={() => tog_positionTop()}>
+												Top Modal
+											</Button>
+											<Button
+												color='secondary'
+												onClick={() => tog_positionTopRight()}
+											>
+												Top Right Modal
+											</Button>
+											<Button
+												color='success'
+												onClick={() => tog_positionBottom()}
+											>
+												Bottom Modal
+											</Button>
+											<Button
+												color='danger'
+												onClick={() => tog_positionBottomRight()}
+											>
+												Bottom Right Modal
+											</Button>
+										</div>
+									</div>
+								</div>
+								<div className='d-none code-view'>
+									<pre className='language-markup' style={{ height: '275px' }}>
+										<code>
+											<PositionModalExample />
+										</code>
+									</pre>
+								</div>
+							</CardBody>
+						</Card>
+					</Col>
+				</Row>
+				<Row className='mt-2'>
+					<Col lg={12}>
+						<div className='justify-content-between d-flex align-items-center mb-3'>
+							<h5 className='mb-0 pb-1 text-decoration-underline'>
+								Custom Modals Example
+							</h5>
+						</div>
+						<Row>
+							<Col xl={4} md={6}>
+								<Card className='text-center border'>
+									<CardBody className='p-4 pb-0'>
+										<h5 className='mb-4'>Success Message</h5>
+										<p className='text-muted'>
+											Here is an example of a sweet alert with a success
+											message.
+										</p>
 										<div>
-											<div className='hstack gap-2 flex-wrap'>
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen1()}
-												>
-													{' '}
-													Fullscreen modal{' '}
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen_sm()}
-												>
-													Full Screen Below sm
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen_md()}
-												>
-													Full Screen Below md
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen_lg()}
-												>
-													Full Screen Below lg
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen_xl()}
-												>
-													Full Screen Below xl
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_fullscreen_xxl()}
-												>
-													Full Screen Below xxl
-												</Button>
-											</div>
+											<Button
+												color='primary'
+												data-bs-toggle='modal'
+												data-bs-target='#success-Payment'
+												onClick={() => tog_successMessage()}
+											>
+												Click me
+											</Button>
 										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<FullscreenResponsiveExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
 
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Animation Modals' />
-								<CardBody>
-									<p className='text-muted'>
-										Use <code>fadeInRight</code>, <code>fadeInLeft</code>,{' '}
-										<code>fadeInUp</code>, <code>flip</code>, or{' '}
-										<code>zoomIn</code> class to modal class to set different
-										modal with animation effect respectively.
-									</p>
-									<div className='live-preview'>
+										<Row className='justify-content-center mt-2'>
+											<Col lg={10}>
+												<div>
+													<img
+														src={paymentImg}
+														alt='Mac'
+														className='img-fluid'
+													/>
+												</div>
+											</Col>
+										</Row>
+									</CardBody>
+								</Card>
+							</Col>
+
+							<Col xl={4} md={6}>
+								<Card className='text-center border'>
+									<CardBody className='p-4 pb-0'>
+										<h5 className='mb-4'>Login Modals</h5>
+										<p className='text-muted'>
+											Here is an example of a sweet alert with a error message.
+										</p>
 										<div>
-											<div className='hstack gap-2 flex-wrap'>
-												<Button
-													color='primary'
-													onClick={() => tog_animationRight()}
-												>
-													Fade In Right Modal
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_animationLeft()}
-												>
-													Fade In Left Modal
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_animationUp()}
-												>
-													Fade In Up Modal
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_animationFlip()}
-												>
-													Flip Modal
-												</Button>
-												<Button
-													color='primary'
-													onClick={() => tog_animationZoom()}
-												>
-													Zoom In Modal
-												</Button>
-											</div>
+											<Button
+												color='primary'
+												onClick={() => tog_loginModals()}
+												data-bs-toggle='modal'
+												data-bs-target='#loginModals'
+											>
+												Click me
+											</Button>
 										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<AnimationModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
 
-					<Row>
-						<Col lg={12}>
-							<Card>
-								<PreviewCardHeader title='Modal Positions' />
-								<CardBody>
-									<p className='text-muted text-muted'>
-										Use <code>modal-dialog-right</code>,{' '}
-										<code>modal-dialog-bottom</code>, or{' '}
-										<code>modal-dialog-bottom-right</code> class to modal-dialog
-										class to set modal at different positions respectively.
-									</p>
-									<div className='live-preview'>
+										<Row className='justify-content-center mt-2'>
+											<Col lg={10}>
+												<div>
+													<img src={loginImg} alt='Mac' className='img-fluid' />
+												</div>
+											</Col>
+										</Row>
+									</CardBody>
+								</Card>
+							</Col>
+
+							<Col xl={4} md={6}>
+								<Card className='text-center border'>
+									<CardBody className='p-4 pb-0'>
+										<h5 className='mb-4'>Subscribe Modals</h5>
+										<p className='text-muted'>
+											Here is an example of a sweet alert with a warning
+											message.
+										</p>
 										<div>
-											<div className='hstack gap-2 flex-wrap'>
-												<Button
-													color='primary'
-													onClick={() => tog_positionTop()}
-												>
-													Top Modal
-												</Button>
-												<Button
-													color='secondary'
-													onClick={() => tog_positionTopRight()}
-												>
-													Top Right Modal
-												</Button>
-												<Button
-													color='success'
-													onClick={() => tog_positionBottom()}
-												>
-													Bottom Modal
-												</Button>
-												<Button
-													color='danger'
-													onClick={() => tog_positionBottomRight()}
-												>
-													Bottom Right Modal
-												</Button>
-											</div>
+											<Button
+												color='primary'
+												onClick={() => tog_subscribeModals()}
+												className='btn btn-primary'
+												data-bs-toggle='modal'
+												data-bs-target='#subscribeModals'
+											>
+												Click me
+											</Button>
 										</div>
-									</div>
-									<div className='d-none code-view'>
-										<pre
-											className='language-markup'
-											style={{ height: '275px' }}
-										>
-											<code>
-												<PositionModalExample />
-											</code>
-										</pre>
-									</div>
-								</CardBody>
-							</Card>
-						</Col>
-					</Row>
-					<Row className='mt-2'>
-						<Col lg={12}>
-							<div className='justify-content-between d-flex align-items-center mb-3'>
-								<h5 className='mb-0 pb-1 text-decoration-underline'>
-									Custom Modals Example
-								</h5>
-							</div>
-							<Row>
-								<Col xl={4} md={6}>
-									<Card className='text-center border'>
-										<CardBody className='p-4 pb-0'>
-											<h5 className='mb-4'>Success Message</h5>
-											<p className='text-muted'>
-												Here is an example of a sweet alert with a success
-												message.
-											</p>
-											<div>
-												<Button
-													color='primary'
-													data-bs-toggle='modal'
-													data-bs-target='#success-Payment'
-													onClick={() => tog_successMessage()}
-												>
-													Click me
-												</Button>
-											</div>
 
-											<Row className='justify-content-center mt-2'>
-												<Col lg={10}>
-													<div>
-														<img
-															src={paymentImg}
-															alt='Mac'
-															className='img-fluid'
-														/>
-													</div>
-												</Col>
-											</Row>
-										</CardBody>
-									</Card>
-								</Col>
+										<Row className='justify-content-center mt-2'>
+											<Col lg={10}>
+												<div>
+													<img
+														src={subscribeImg}
+														alt='Mac'
+														className='img-fluid'
+													/>
+												</div>
+											</Col>
+										</Row>
+									</CardBody>
+								</Card>
+							</Col>
 
-								<Col xl={4} md={6}>
-									<Card className='text-center border'>
-										<CardBody className='p-4 pb-0'>
-											<h5 className='mb-4'>Login Modals</h5>
-											<p className='text-muted'>
-												Here is an example of a sweet alert with a error
-												message.
-											</p>
-											<div>
-												<Button
-													color='primary'
-													onClick={() => tog_loginModals()}
-													data-bs-toggle='modal'
-													data-bs-target='#loginModals'
-												>
-													Click me
-												</Button>
-											</div>
+							<Col xl={4} md={6}>
+								<Card className='text-center border'>
+									<CardBody className='p-4 pb-0'>
+										<h5 className='mb-4'>Sign Up Modals</h5>
+										<p className='text-muted'>
+											Here is an example of a sweet alert with a community
+											registration field.{' '}
+										</p>
 
-											<Row className='justify-content-center mt-2'>
-												<Col lg={10}>
-													<div>
-														<img
-															src={loginImg}
-															alt='Mac'
-															className='img-fluid'
-														/>
-													</div>
-												</Col>
-											</Row>
-										</CardBody>
-									</Card>
-								</Col>
+										<div>
+											<Button
+												color='primary'
+												onClick={() => tog_signUpModals()}
+												data-bs-toggle='modal'
+												data-bs-target='#signupModals'
+											>
+												Click me
+											</Button>
+										</div>
 
-								<Col xl={4} md={6}>
-									<Card className='text-center border'>
-										<CardBody className='p-4 pb-0'>
-											<h5 className='mb-4'>Subscribe Modals</h5>
-											<p className='text-muted'>
-												Here is an example of a sweet alert with a warning
-												message.
-											</p>
-											<div>
-												<Button
-													color='primary'
-													onClick={() => tog_subscribeModals()}
-													className='btn btn-primary'
-													data-bs-toggle='modal'
-													data-bs-target='#subscribeModals'
-												>
-													Click me
-												</Button>
-											</div>
-
-											<Row className='justify-content-center mt-2'>
-												<Col lg={10}>
-													<div>
-														<img
-															src={subscribeImg}
-															alt='Mac'
-															className='img-fluid'
-														/>
-													</div>
-												</Col>
-											</Row>
-										</CardBody>
-									</Card>
-								</Col>
-
-								<Col xl={4} md={6}>
-									<Card className='text-center border'>
-										<CardBody className='p-4 pb-0'>
-											<h5 className='mb-4'>Sign Up Modals</h5>
-											<p className='text-muted'>
-												Here is an example of a sweet alert with a community
-												registration field.{' '}
-											</p>
-
-											<div>
-												<Button
-													color='primary'
-													onClick={() => tog_signUpModals()}
-													data-bs-toggle='modal'
-													data-bs-target='#signupModals'
-												>
-													Click me
-												</Button>
-											</div>
-
-											<Row className='justify-content-center mt-2'>
-												<Col lg={10}>
-													<div>
-														<img
-															src={signupImg}
-															alt='Mac'
-															className='img-fluid'
-														/>
-													</div>
-												</Col>
-											</Row>
-										</CardBody>
-									</Card>
-								</Col>
-							</Row>
-						</Col>
-					</Row>
-				</Container>
-			</div>
+										<Row className='justify-content-center mt-2'>
+											<Col lg={10}>
+												<div>
+													<img
+														src={signupImg}
+														alt='Mac'
+														className='img-fluid'
+													/>
+												</div>
+											</Col>
+										</Row>
+									</CardBody>
+								</Card>
+							</Col>
+						</Row>
+					</Col>
+				</Row>
+			</Container>
 			{/* Default Modal */}
 			<Modal
 				id='myModal'
@@ -3264,7 +3211,7 @@ const UiModals = () => {
 					</form>
 				</ModalBody>
 			</Modal>
-		</React.Fragment>
+		</Layout>
 	);
 };
 
