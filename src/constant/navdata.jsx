@@ -91,7 +91,7 @@ export const menuItems = [
 			{
 				id: 'timeline',
 				label: 'Timeline',
-				link: '/pages-timeline',
+				link: '/pages/timeline',
 				parentId: 'pages',
 			},
 			{ id: 'faqs', label: 'FAQs', link: '/pages-faqs', parentId: 'pages' },
