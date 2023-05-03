@@ -325,12 +325,6 @@ export const menuItems = [
 				parentId: 'tables',
 			},
 			{
-				id: 'listjs',
-				label: 'List Js',
-				link: '/tables/listjs',
-				parentId: 'tables',
-			},
-			{
 				id: 'datatables',
 				label: 'Datatables',
 				link: '/tables/datatables',
