@@ -1,9 +1,9 @@
-import PrismCode from "../../../Components/Common/Prism";
+import React from 'react';
+import PrismCode from '../Common/Prism';
 
 // Image Rounded & Circle
 
-const imgRoundedCircleCode =
-    `
+const imgRoundedCircleCode = `
 <!-- Rounded Image -->
 <img className="rounded" alt="200x200" width="200" src={img4} />
 
@@ -12,17 +12,16 @@ const imgRoundedCircleCode =
 `;
 
 const ImgRoundedCircleExample = () => (
-    <PrismCode
-        code={imgRoundedCircleCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={imgRoundedCircleCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Image Thumbnails
 
-const imgThumbnailsCode =
-    `
+const imgThumbnailsCode = `
 <!-- Thumbnails Images -->
 <img className="img-thumbnail" alt="200x200" width="200" src={img3} />
 
@@ -30,18 +29,16 @@ const imgThumbnailsCode =
 `;
 
 const ImgThumbnailsExample = () => (
-    <PrismCode
-        code={imgThumbnailsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={imgThumbnailsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Image Sizes
 
-const imgSizesCode =
-    `
+const imgSizesCode = `
 <!-- Image Sizes -->
 <img src={avatar2} alt="" className="rounded avatar-xxs" />
 
@@ -69,18 +66,16 @@ const imgSizesCode =
 `;
 
 const ImgSizesExample = () => (
-    <PrismCode
-        code={imgSizesCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={imgSizesCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Avatar With Content
 
-const avatarCode =
-    `
+const avatarCode = `
 <!-- Avatar With Content -->
 <div className="avatar-xxs">
     <div className="avatar-title rounded bg-soft-primary text-primary">
@@ -120,17 +115,16 @@ const avatarCode =
 `;
 
 const AvatarExample = () => (
-    <PrismCode
-        code={avatarCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={avatarCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Avatar Group
 
-const avatarGroupCode =
-    `
+const avatarGroupCode = `
 <!-- Simple Group -->
 <div className="avatar-group">
     <div className="avatar-group-item">
@@ -183,18 +177,16 @@ const avatarGroupCode =
 `;
 
 const AvatarGroupExample = () => (
-    <PrismCode
-        code={avatarGroupCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={avatarGroupCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
-
 
 // Figures
 
-const figuresCode =
-    `
+const figuresCode = `
 <!-- figures Images -->
 <figure className="figure">
     <img src={img4} className="figure-img img-fluid rounded" alt="..." />
@@ -208,27 +200,34 @@ const figuresCode =
 `;
 
 const FiguresExample = () => (
-    <PrismCode
-        code={figuresCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={figuresCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Responsive Images
 
-const responsiveCode =
-    `
+const responsiveCode = `
 <!-- Responsive Images -->
 <img src={img2} className="img-fluid" alt="Responsive image" />
 `;
 
 const ResponsiveExample = () => (
-    <PrismCode
-        code={responsiveCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={responsiveCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-export { ImgRoundedCircleExample, ImgThumbnailsExample, ImgSizesExample, AvatarExample, AvatarGroupExample, FiguresExample, ResponsiveExample };
+export {
+	ImgRoundedCircleExample,
+	ImgThumbnailsExample,
+	ImgSizesExample,
+	AvatarExample,
+	AvatarGroupExample,
+	FiguresExample,
+	ResponsiveExample,
+};
