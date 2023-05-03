@@ -1,9 +1,9 @@
-import PrismCode from "../../../Components/Common/Prism";
+import React from 'react';
+import PrismCode from '../Common/Prism';
 
 // Rounded Ribbon
 
-const roundedRibbonCode =
-    `
+const roundedRibbonCode = `
 <!-- Rounded Ribbon -->
 <Card className="ribbon-box border shadow-none mb-lg-0">
     <CardBody>
@@ -41,17 +41,16 @@ const roundedRibbonCode =
 `;
 
 const RoundedRibbonExample = () => (
-    <PrismCode
-        code={roundedRibbonCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={roundedRibbonCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Ribbon Shape
 
-const ribbonShapeCode =
-    `
+const ribbonShapeCode = `
 <!-- Ribbon Shape -->
 <Card className="ribbon-box border shadow-none mb-lg-0">
     <CardBody>
@@ -88,17 +87,16 @@ const ribbonShapeCode =
 `;
 
 const RibbonShapeExample = () => (
-    <PrismCode
-        code={ribbonShapeCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={ribbonShapeCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Filled Ribbons
 
-const filledRibbonsCode =
-    `
+const filledRibbonsCode = `
 <!-- Filled Ribbons -->
 <Card className="ribbon-box border ribbon-fill shadow-none mb-lg-0">
     <CardBody>
@@ -136,17 +134,16 @@ const filledRibbonsCode =
 `;
 
 const FilledRibbonsExample = () => (
-    <PrismCode
-        code={filledRibbonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={filledRibbonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Boxed Ribbons
 
-const boxedRibbonsCode =
-    `
+const boxedRibbonsCode = `
 <!-- Boxed Ribbons -->
 <Card className="ribbon-box border shadow-none mb-lg-0">
     <CardBody className="text-muted">
@@ -171,17 +168,16 @@ const boxedRibbonsCode =
 `;
 
 const BoxedRibbonsExample = () => (
-    <PrismCode
-        code={boxedRibbonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={boxedRibbonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Ribbons
 
-const ribbonsCode =
-    `
+const ribbonsCode = `
 <!-- Ribbons -->
 <Card className="ribbon-box border shadow-none mb-lg-0">
     <CardBody className="text-muted">
@@ -206,17 +202,16 @@ const ribbonsCode =
 `;
 
 const RibbonsExample = () => (
-    <PrismCode
-        code={ribbonsCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={ribbonsCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
 // Ribbons Hover
 
-const ribbonsHoverCode =
-    `
+const ribbonsHoverCode = `
 <!-- Ribbons Hover -->
 <Card className="ribbon-box border shadow-none overflow-hidden">
     <CardBody className="text-muted">
@@ -250,11 +245,18 @@ const ribbonsHoverCode =
 `;
 
 const RibbonsHoverExample = () => (
-    <PrismCode
-        code={ribbonsHoverCode}
-        language={("js", "css", "html")}
-        plugins={["line-numbers"]}
-    />
+	<PrismCode
+		code={ribbonsHoverCode}
+		language={('js', 'css', 'html')}
+		plugins={['line-numbers']}
+	/>
 );
 
-export { RoundedRibbonExample, RibbonShapeExample, FilledRibbonsExample, BoxedRibbonsExample, RibbonsExample, RibbonsHoverExample };
+export {
+	RoundedRibbonExample,
+	RibbonShapeExample,
+	FilledRibbonsExample,
+	BoxedRibbonsExample,
+	RibbonsExample,
+	RibbonsHoverExample,
+};
