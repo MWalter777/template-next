@@ -461,26 +461,16 @@ export const menuItems = [
 		label: 'Authentication',
 		icon: 'ri-account-circle-line',
 		link: '/#',
-		click: function (e) {
-			e.preventDefault();
-			setIsAuth(!isAuth);
-			setIscurrentState('Auth');
-			updateIconSidebar(e);
-		},
 		subItems: [
 			{
 				id: 'signIn',
 				label: 'Sign In',
 				link: '/#',
 				isChildItem: true,
-				click: function (e) {
-					e.preventDefault();
-					setIsSignIn(!isSignIn);
-				},
 				parentId: 'authentication',
 				childItems: [
-					{ id: 1, label: 'Basic', link: '/auth-signin-basic' },
-					{ id: 2, label: 'Cover', link: '/auth-signin-cover' },
+					{ id: 1, label: 'Basic', link: '/auth/login' },
+					{ id: 2, label: 'Cover', link: '/auth/login' },
 				],
 			},
 			{
