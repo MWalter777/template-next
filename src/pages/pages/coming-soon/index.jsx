@@ -1,4 +1,5 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { Col, Container, Input, InputGroup, Row } from 'reactstrap';
 import Countdown from 'react-countdown';
 
@@ -91,4 +92,6 @@ const ComingSoon = () => {
 	);
 };
 
-export default ComingSoon;
+export default dynamic(() => Promise.resolve(ComingSoon), {
+	ssr: false,
+});
