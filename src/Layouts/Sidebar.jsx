@@ -8,28 +8,28 @@ import { Container } from 'reactstrap';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Sidebar = ({ className = '' }) => {
+const Sidebar = ({ className = '', toggleSidebar = () => {} }) => {
 	return (
 		<Fragment>
 			<div className={`app-menu navbar-menu ${className}`}>
 				<div className='navbar-brand-box'>
-					<Link href='/' className='logo logo-dark'>
+					<button className='logo logo-dark btn_clean ' onClick={toggleSidebar}>
 						<span className='logo-sm'>
 							<Image src={logoSm} alt='' height='22' />
 						</span>
 						<span className='logo-lg'>
 							<Image src={logoDark} alt='' height='17' />
 						</span>
-					</Link>
+					</button>
 
-					<Link href='/' className='logo logo-light'>
+					<button className='logo logo-light btn_clean' onClick={toggleSidebar}>
 						<span className='logo-sm'>
 							<Image src={logoSm} alt='' height='22' />
 						</span>
 						<span className='logo-lg'>
 							<Image src={logoLight} alt='' height='17' />
 						</span>
-					</Link>
+					</button>
 					<button
 						type='button'
 						className='btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover'

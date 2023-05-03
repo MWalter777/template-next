@@ -1,10 +1,10 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
-const Footer = () => {
+const Footer = ({ className = '' }) => {
 	return (
 		<React.Fragment>
-			<footer className='footer'>
+			<footer className={`footer ${className}`}>
 				<Container fluid>
 					<Row>
 						<Col sm={6}>{new Date().getFullYear()} © Velzon.</Col>
