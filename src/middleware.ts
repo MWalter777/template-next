@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server';
 
 // example how could you use this in your app
 const routesAndPermissions = [
-	{ route: '/dashboard-analytics', permission: 'USERS_READ' },
-	{ route: '/dashboard', permission: 'USERS_UPDATE' },
+	{ route: '/dashboard-analytics', permission: 'USERS_UPDATE' },
+	{ route: '/dashboard', permission: 'USERS_READ' },
 ];
 
 const getCookies = (request, name = 'permissions') => {
